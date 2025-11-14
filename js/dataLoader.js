@@ -5,23 +5,48 @@ class DataLoader {
     }
 
     async loadAll() {
+        console.log('[DataLoader] Starting to load all data...');
         try {
             await this.loadSampleData();
+            console.log('[DataLoader] Data files loaded');
             this.processData();
+            console.log('[DataLoader] Data processing complete');
+            console.log('[DataLoader] Processed data summary:', {
+                popularity: this.processedData?.popularity?.length || 0,
+                genres: this.processedData?.genres?.length || 0,
+                energyDanceability: this.processedData?.energyDanceability?.length || 0,
+                topArtists: this.processedData?.topArtists?.length || 0,
+                radialData: this.processedData?.radialData?.length || 0
+            });
             return this.processedData;
         } catch (error) {
-            console.error('Error loading data:', error);
+            console.error('[DataLoader] ERROR loading data:', error);
             throw error;
         }
     }
 
     async loadSampleData() {
+        console.log('[DataLoader] Loading JSON data files...');
         try {
+            console.log('[DataLoader] Loading by_decade.json...');
             const byDecade = await this.loadFromJSON('data/processed/by_decade.json');
+            console.log('[DataLoader] by_decade.json loaded:', byDecade?.length || 0, 'records');
+            
+            console.log('[DataLoader] Loading by_genre.json...');
             const byGenre = await this.loadFromJSON('data/processed/by_genre.json');
+            console.log('[DataLoader] by_genre.json loaded:', byGenre?.length || 0, 'records');
+            
+            console.log('[DataLoader] Loading energy_danceability.json...');
             const energyDanceability = await this.loadFromJSON('data/processed/energy_danceability.json');
+            console.log('[DataLoader] energy_danceability.json loaded:', energyDanceability?.length || 0, 'records');
+            
+            console.log('[DataLoader] Loading top_artists.json...');
             const topArtists = await this.loadFromJSON('data/processed/top_artists.json');
+            console.log('[DataLoader] top_artists.json loaded:', topArtists?.length || 0, 'records');
+            
+            console.log('[DataLoader] Loading radial_data.json...');
             const radialData = await this.loadFromJSON('data/processed/radial_data.json');
+            console.log('[DataLoader] radial_data.json loaded:', radialData?.length || 0, 'records');
 
             this.spotifyData = {
                 byDecade,
@@ -30,152 +55,90 @@ class DataLoader {
                 topArtists,
                 radialData
             };
+            console.log('[DataLoader] All JSON files loaded successfully');
         } catch (error) {
-            console.warn('Could not load JSON files, using fallback data:', error);
-            this.spotifyData = {
-                byDecade: [],
-                byGenre: [],
-                energyDanceability: [],
-                topArtists: [],
-                radialData: []
-            };
+            console.error('[DataLoader] ERROR: Could not load JSON files:', error);
+            console.error('[DataLoader] Please run: python3 data/process_data.py to generate data files');
+            throw new Error('Data files not found. Please process the dataset first.');
         }
     }
 
     processData() {
-        if (!this.spotifyData) return;
+        console.log('[DataLoader] Processing data...');
+        if (!this.spotifyData) {
+            console.warn('[DataLoader] WARNING: No spotify data available');
+            return;
+        }
+
+        console.log('[DataLoader] Aggregating by decade...');
+        const popularity = this.aggregateByDecade('popularity');
+        console.log('[DataLoader] Popularity data:', popularity?.length || 0, 'records');
+        
+        console.log('[DataLoader] Aggregating genres...');
+        const genres = this.aggregateGenres();
+        console.log('[DataLoader] Genres data:', genres?.length || 0, 'records');
+        
+        console.log('[DataLoader] Aggregating energy/danceability...');
+        const energyDanceability = this.aggregateEnergyDanceability();
+        console.log('[DataLoader] Energy/Danceability data:', energyDanceability?.length || 0, 'records');
+        
+        console.log('[DataLoader] Aggregating top artists...');
+        const topArtists = this.aggregateTopArtists();
+        console.log('[DataLoader] Top artists data:', topArtists?.length || 0, 'records');
+        
+        console.log('[DataLoader] Preparing radial data...');
+        const radialData = this.prepareRadialData();
+        console.log('[DataLoader] Radial data:', radialData?.length || 0, 'records');
 
         this.processedData = {
-            popularity: this.aggregateByDecade('popularity'),
-            genres: this.aggregateGenres(),
-            energyDanceability: this.aggregateEnergyDanceability(),
-            topArtists: this.aggregateTopArtists(),
-            radialData: this.prepareRadialData()
+            popularity,
+            genres,
+            energyDanceability,
+            topArtists,
+            radialData
         };
+        
+        console.log('[DataLoader] Data processing complete');
     }
 
     aggregateByDecade(metric = 'popularity') {
         if (this.spotifyData && this.spotifyData.byDecade && this.spotifyData.byDecade.length > 0) {
             return this.spotifyData.byDecade;
         }
-        
-        const decades = ['1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s'];
-        const yearRanges = {
-            '1960s': [1960, 1969],
-            '1970s': [1970, 1979],
-            '1980s': [1980, 1989],
-            '1990s': [1990, 1999],
-            '2000s': [2000, 2009],
-            '2010s': [2010, 2019],
-            '2020s': [2020, 2024]
-        };
-
-        return decades.map(decade => {
-            const [start, end] = yearRanges[decade];
-            return {
-                decade,
-                startYear: start,
-                endYear: end,
-                avgPopularity: Math.random() * 40 + 30 + (decades.indexOf(decade) * 5)
-            };
-        });
+        console.error('[DataLoader] ERROR: No decade data available');
+        return [];
     }
 
     aggregateGenres() {
         if (this.spotifyData && this.spotifyData.byGenre && this.spotifyData.byGenre.length > 0) {
             return this.spotifyData.byGenre;
         }
-        
-        const decades = ['1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s'];
-        const genres = ['Pop', 'Rock', 'Hip-Hop', 'Electronic', 'R&B', 'Country', 'Jazz', 'Other'];
-
-        return decades.map(decade => {
-            const genreCounts = {};
-            genres.forEach(genre => {
-                genreCounts[genre] = Math.random() * 30 + Math.random() * 20;
-            });
-            
-            const total = Object.values(genreCounts).reduce((a, b) => a + b, 0);
-            const genrePercentages = {};
-            genres.forEach(genre => {
-                genrePercentages[genre] = (genreCounts[genre] / total) * 100;
-            });
-
-            return {
-                decade,
-                genres: genrePercentages,
-                total: total
-            };
-        });
+        console.error('[DataLoader] ERROR: No genre data available');
+        return [];
     }
 
     aggregateEnergyDanceability() {
         if (this.spotifyData && this.spotifyData.energyDanceability && this.spotifyData.energyDanceability.length > 0) {
             return this.spotifyData.energyDanceability;
         }
-        
-        const points = [];
-        const decades = ['1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s'];
-        
-        decades.forEach(decade => {
-            for (let i = 0; i < 100; i++) {
-                points.push({
-                    decade,
-                    energy: Math.random(),
-                    danceability: Math.random(),
-                    popularity: Math.random() * 100,
-                    genre: ['Pop', 'Rock', 'Hip-Hop', 'Electronic'][Math.floor(Math.random() * 4)]
-                });
-            }
-        });
-
-        return points;
+        console.error('[DataLoader] ERROR: No energy/danceability data available');
+        return [];
     }
 
     aggregateTopArtists() {
         if (this.spotifyData && this.spotifyData.topArtists && this.spotifyData.topArtists.length > 0) {
             return this.spotifyData.topArtists;
         }
-        
-        const decades = ['1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s'];
-        const sampleArtists = {
-            '1960s': ['The Beatles', 'The Rolling Stones', 'Bob Dylan', 'Jimi Hendrix', 'The Doors'],
-            '1970s': ['Led Zeppelin', 'Queen', 'Pink Floyd', 'David Bowie', 'Fleetwood Mac'],
-            '1980s': ['Michael Jackson', 'Madonna', 'Prince', 'The Cure', 'U2'],
-            '1990s': ['Nirvana', 'Radiohead', 'Tupac', 'The Notorious B.I.G.', 'Britney Spears'],
-            '2000s': ['Eminem', 'Beyoncé', 'OutKast', 'Coldplay', 'Alicia Keys'],
-            '2010s': ['Taylor Swift', 'Drake', 'Adele', 'Ed Sheeran', 'Billie Eilish'],
-            '2020s': ['The Weeknd', 'Olivia Rodrigo', 'Bad Bunny', 'Dua Lipa', 'Harry Styles']
-        };
-
-        return decades.map(decade => {
-            return sampleArtists[decade].map((artist, index) => ({
-                name: artist,
-                decade,
-                popularity: 90 - (index * 10) + Math.random() * 10,
-                genre: ['Pop', 'Rock', 'Hip-Hop', 'Electronic'][Math.floor(Math.random() * 4)],
-                hitCount: 5 - index + Math.floor(Math.random() * 3)
-            }));
-        }).flat();
+        console.error('[DataLoader] ERROR: No top artists data available');
+        return [];
     }
 
     prepareRadialData() {
         if (this.spotifyData && this.spotifyData.radialData && this.spotifyData.radialData.length > 0) {
             return this.spotifyData.radialData;
         }
-        
-        const decades = ['1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s'];
-        
-        return decades.map((decade, index) => {
-            return {
-                decade,
-                energy: 0.4 + (index * 0.05) + Math.random() * 0.1,
-                tempo: 100 + (index * 5) + Math.random() * 20,
-                valence: 0.5 + Math.sin(index * 0.5) * 0.2 + Math.random() * 0.1,
-                loudness: -10 - (index * 1) + Math.random() * 2,
-                acousticness: 0.5 - (index * 0.05) + Math.random() * 0.1
-            };
-        });
+        console.error('[DataLoader] ERROR: No radial data available');
+        return [];
     }
 
     async loadFromJSON(url) {

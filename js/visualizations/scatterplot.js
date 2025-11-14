@@ -12,19 +12,27 @@ class Scatterplot {
         this.sizeScale = null;
         this.data = null;
         this.currentFilter = null;
+        this.isResizing = false;
     }
 
     init(data) {
+        console.log('[Scatterplot] Initialization started');
+        console.log('[Scatterplot] Container ID:', this.containerId);
+        console.log('[Scatterplot] Data received:', data);
+        
         if (!data || data.length === 0) {
-            console.error('No data provided to scatterplot');
+            console.error('[Scatterplot] ERROR: No data provided to scatterplot');
             return;
         }
+        
+        console.log('[Scatterplot] Data length:', data.length);
         this.data = data;
         this.setupColorScale();
         this.setupSizeScale();
         this.setupSVG();
         this.drawChart();
         this.addFilter();
+        console.log('[Scatterplot] Initialization complete');
     }
 
     setupColorScale() {
@@ -43,11 +51,22 @@ class Scatterplot {
     }
 
     setupSVG() {
+        console.log('[Scatterplot] Setting up SVG for container:', this.containerId);
         const container = d3.select(`#${this.containerId}`);
+        
         if (container.empty()) {
-            console.error(`Container #${this.containerId} not found`);
+            console.error(`[Scatterplot] ERROR: Container #${this.containerId} not found`);
             return;
         }
+        
+        const containerNode = container.node();
+        const containerRect = containerNode.getBoundingClientRect();
+        console.log('[Scatterplot] Container found. Dimensions:', {
+            width: containerRect.width,
+            height: containerRect.height,
+            visible: containerRect.width > 0 && containerRect.height > 0
+        });
+        
         container.selectAll('*').remove();
 
         const containerWidth = container.node().getBoundingClientRect().width || 800;
@@ -69,18 +88,44 @@ class Scatterplot {
             .domain([0, 1])
             .nice()
             .range([this.height, 0]);
+        
+        console.log('[Scatterplot] Scales created. Dimensions:', {
+            containerWidth,
+            chartWidth: this.width,
+            chartHeight: this.height
+        });
     }
 
     drawChart() {
-        if (!this.svg || !this.data) return;
+        console.log('[Scatterplot] Drawing chart');
+        
+        if (!this.svg) {
+            console.error('[Scatterplot] ERROR: SVG not initialized');
+            return;
+        }
+        
+        if (!this.data) {
+            console.error('[Scatterplot] ERROR: Data not available');
+            return;
+        }
 
-        this.svg.selectAll('.dot').remove();
+        const existingDots = this.svg.selectAll('.dot');
+        const dotCount = existingDots.size();
+        console.log('[Scatterplot] Removing', dotCount, 'existing dots');
+        existingDots.remove();
 
         this.drawAxes();
+        console.log('[Scatterplot] Axes drawn');
 
         const filteredData = this.currentFilter 
             ? this.data.filter(d => d.decade === this.currentFilter)
             : this.data;
+        
+        console.log('[Scatterplot] Data points to plot:', {
+            total: this.data.length,
+            filtered: filteredData.length,
+            filter: this.currentFilter || 'All'
+        });
 
         const dots = this.svg.selectAll('.dot')
             .data(filteredData)
@@ -97,6 +142,9 @@ class Scatterplot {
             .on('mouseover', (event, d) => this.showTooltip(event, d))
             .on('mouseout', () => this.hideTooltip())
             .on('mousemove', (event) => this.moveTooltip(event));
+        
+        console.log('[Scatterplot] Chart drawing complete');
+        console.log('[Scatterplot] Points drawn:', filteredData.length);
     }
 
     drawAxes() {
@@ -151,8 +199,12 @@ class Scatterplot {
             const select = filterDiv.append('select')
                 .attr('id', 'decade-filter')
                 .on('change', (event) => {
-                    this.currentFilter = event.target.value === 'All' ? null : event.target.value;
-                    this.drawChart();
+                    const newFilter = event.target.value === 'All' ? null : event.target.value;
+                    if (this.currentFilter !== newFilter) {
+                        console.log('[Scatterplot] Filter changed from', this.currentFilter, 'to', newFilter);
+                        this.currentFilter = newFilter;
+                        this.drawChart();
+                    }
                 });
 
             select.selectAll('option')
@@ -190,10 +242,16 @@ class Scatterplot {
     }
 
     resize() {
-        if (this.data) {
+        if (this.data && !this.isResizing) {
+            this.isResizing = true;
+            console.log('[Scatterplot] Resizing chart');
             this.setupSVG();
             this.drawChart();
-            this.addFilter();
+            const container = d3.select(`#${this.containerId}`);
+            if (container.select('.filter-controls').empty()) {
+                this.addFilter();
+            }
+            this.isResizing = false;
         }
     }
 }

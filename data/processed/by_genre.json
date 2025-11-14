@@ -2,79 +2,97 @@
   {
     "decade": "1960s",
     "genres": {
-      "Rock": 45.2,
-      "Pop": 30.1,
-      "Jazz": 12.5,
-      "R&B": 8.3,
-      "Country": 3.9
+      "blues-rock": 0.072992700729927,
+      "doo-wop": 0.072992700729927,
+      "country rock": 0.058394160583941604,
+      "blue-eyed soul": 0.051094890510948905,
+      "rock 'n roll": 0.051094890510948905,
+      "honky tonk": 0.051094890510948905,
+      "brill building pop": 0.043795620437956206,
+      "country blues": 0.043795620437956206,
+      "latin jazz": 0.0364963503649635,
+      "blues": 0.0364963503649635
     },
-    "total": 1500
+    "total": 137
   },
   {
     "decade": "1970s",
     "genres": {
-      "Rock": 50.5,
-      "Pop": 25.2,
-      "Disco": 10.3,
-      "R&B": 8.1,
-      "Country": 5.9
+      "blues-rock": 0.15447154471544716,
+      "glam rock": 0.044715447154471545,
+      "roots reggae": 0.04065040650406504,
+      "soul jazz": 0.032520325203252036,
+      "pop rock": 0.032520325203252036,
+      "country rock": 0.032520325203252036,
+      "jazz funk": 0.028455284552845527,
+      "new wave": 0.028455284552845527,
+      "power pop": 0.028455284552845527,
+      "rock": 0.024390243902439025
     },
-    "total": 2000
+    "total": 246
   },
   {
     "decade": "1980s",
     "genres": {
-      "Pop": 40.3,
-      "Rock": 35.2,
-      "Hip-Hop": 12.5,
-      "Electronic": 7.5,
-      "R&B": 4.5
+      "blues-rock": 0.07061503416856492,
+      "pop rock": 0.05466970387243736,
+      "heavy metal": 0.04783599088838269,
+      "hardcore punk": 0.04555808656036447,
+      "hip hop": 0.04100227790432802,
+      "country rock": 0.03644646924829157,
+      "new wave": 0.03644646924829157,
+      "dance rock": 0.029612756264236904,
+      "rock": 0.025056947608200455,
+      "roots reggae": 0.022779043280182234
     },
-    "total": 2500
+    "total": 439
   },
   {
     "decade": "1990s",
     "genres": {
-      "Pop": 35.2,
-      "Rock": 30.1,
-      "Hip-Hop": 20.5,
-      "Electronic": 8.3,
-      "R&B": 5.9
+      "hip hop": 0.048132780082987554,
+      "blues-rock": 0.04730290456431535,
+      "dance pop": 0.028215767634854772,
+      "post-grunge": 0.028215767634854772,
+      "chanson": 0.024896265560165973,
+      "ccm": 0.024066390041493777,
+      "country rock": 0.02074688796680498,
+      "pop rock": 0.018257261410788383,
+      "dancehall": 0.015767634854771784,
+      "latin jazz": 0.014107883817427386
     },
-    "total": 3000
+    "total": 1205
   },
   {
     "decade": "2000s",
     "genres": {
-      "Pop": 38.5,
-      "Hip-Hop": 25.3,
-      "Rock": 20.2,
-      "Electronic": 10.5,
-      "R&B": 5.5
+      "hip hop": 0.055053086905230045,
+      "blues-rock": 0.02909948879276445,
+      "post-grunge": 0.028313016122689737,
+      "dance pop": 0.025167125442390876,
+      "post-hardcore": 0.02202123476209202,
+      "chanson": 0.0184821077467558,
+      "alternative metal": 0.01730239874164373,
+      "gangster rap": 0.016909162406606372,
+      "trip hop": 0.015729453401494297,
+      "progressive house": 0.01533621706645694
     },
-    "total": 3500
+    "total": 2543
   },
   {
     "decade": "2010s",
     "genres": {
-      "Pop": 42.1,
-      "Hip-Hop": 28.5,
-      "Electronic": 15.2,
-      "Rock": 10.3,
-      "R&B": 3.9
+      "blues-rock": 0.125,
+      "post-grunge": 0.0625,
+      "hip hop": 0.046875,
+      "dubstep": 0.03125,
+      "industrial rock": 0.03125,
+      "gaita": 0.03125,
+      "folk rock": 0.03125,
+      "black metal": 0.03125,
+      "southern rock": 0.03125,
+      "french pop": 0.03125
     },
-    "total": 4000
-  },
-  {
-    "decade": "2020s",
-    "genres": {
-      "Pop": 45.8,
-      "Hip-Hop": 30.2,
-      "Electronic": 15.5,
-      "Rock": 5.2,
-      "R&B": 3.3
-    },
-    "total": 2000
+    "total": 64
   }
 ]
-

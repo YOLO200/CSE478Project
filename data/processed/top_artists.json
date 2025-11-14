@@ -1,38 +1,422 @@
 [
-  {"name": "The Beatles", "decade": "1960s", "popularity": 92, "genre": "Rock", "hitCount": 45},
-  {"name": "The Rolling Stones", "decade": "1960s", "popularity": 88, "genre": "Rock", "hitCount": 38},
-  {"name": "Bob Dylan", "decade": "1960s", "popularity": 85, "genre": "Rock", "hitCount": 32},
-  {"name": "Jimi Hendrix", "decade": "1960s", "popularity": 90, "genre": "Rock", "hitCount": 28},
-  {"name": "The Doors", "decade": "1960s", "popularity": 87, "genre": "Rock", "hitCount": 25},
-  {"name": "Led Zeppelin", "decade": "1970s", "popularity": 93, "genre": "Rock", "hitCount": 42},
-  {"name": "Queen", "decade": "1970s", "popularity": 91, "genre": "Rock", "hitCount": 40},
-  {"name": "Pink Floyd", "decade": "1970s", "popularity": 89, "genre": "Rock", "hitCount": 35},
-  {"name": "David Bowie", "decade": "1970s", "popularity": 86, "genre": "Rock", "hitCount": 38},
-  {"name": "Fleetwood Mac", "decade": "1970s", "popularity": 84, "genre": "Rock", "hitCount": 30},
-  {"name": "Michael Jackson", "decade": "1980s", "popularity": 95, "genre": "Pop", "hitCount": 48},
-  {"name": "Madonna", "decade": "1980s", "popularity": 92, "genre": "Pop", "hitCount": 45},
-  {"name": "Prince", "decade": "1980s", "popularity": 90, "genre": "Pop", "hitCount": 42},
-  {"name": "The Cure", "decade": "1980s", "popularity": 85, "genre": "Rock", "hitCount": 35},
-  {"name": "U2", "decade": "1980s", "popularity": 88, "genre": "Rock", "hitCount": 38},
-  {"name": "Nirvana", "decade": "1990s", "popularity": 94, "genre": "Rock", "hitCount": 40},
-  {"name": "Radiohead", "decade": "1990s", "popularity": 89, "genre": "Rock", "hitCount": 35},
-  {"name": "Tupac", "decade": "1990s", "popularity": 93, "genre": "Hip-Hop", "hitCount": 42},
-  {"name": "The Notorious B.I.G.", "decade": "1990s", "popularity": 91, "genre": "Hip-Hop", "hitCount": 38},
-  {"name": "Britney Spears", "decade": "1990s", "popularity": 88, "genre": "Pop", "hitCount": 32},
-  {"name": "Eminem", "decade": "2000s", "popularity": 93, "genre": "Hip-Hop", "hitCount": 45},
-  {"name": "Beyoncé", "decade": "2000s", "popularity": 92, "genre": "Pop", "hitCount": 42},
-  {"name": "OutKast", "decade": "2000s", "popularity": 87, "genre": "Hip-Hop", "hitCount": 35},
-  {"name": "Coldplay", "decade": "2000s", "popularity": 86, "genre": "Rock", "hitCount": 38},
-  {"name": "Alicia Keys", "decade": "2000s", "popularity": 84, "genre": "R&B", "hitCount": 30},
-  {"name": "Taylor Swift", "decade": "2010s", "popularity": 96, "genre": "Pop", "hitCount": 55},
-  {"name": "Drake", "decade": "2010s", "popularity": 94, "genre": "Hip-Hop", "hitCount": 50},
-  {"name": "Adele", "decade": "2010s", "popularity": 92, "genre": "Pop", "hitCount": 45},
-  {"name": "Ed Sheeran", "decade": "2010s", "popularity": 90, "genre": "Pop", "hitCount": 42},
-  {"name": "Billie Eilish", "decade": "2010s", "popularity": 88, "genre": "Pop", "hitCount": 35},
-  {"name": "The Weeknd", "decade": "2020s", "popularity": 95, "genre": "Pop", "hitCount": 48},
-  {"name": "Olivia Rodrigo", "decade": "2020s", "popularity": 92, "genre": "Pop", "hitCount": 42},
-  {"name": "Bad Bunny", "decade": "2020s", "popularity": 91, "genre": "Pop", "hitCount": 40},
-  {"name": "Dua Lipa", "decade": "2020s", "popularity": 89, "genre": "Pop", "hitCount": 38},
-  {"name": "Harry Styles", "decade": "2020s", "popularity": 87, "genre": "Pop", "hitCount": 35}
+  {
+    "name": "Little Eva",
+    "decade": "1960s",
+    "popularity": 92.83671129999999,
+    "genre": "pop rock",
+    "hitCount": 1
+  },
+  {
+    "name": "Janis Joplin",
+    "decade": "1960s",
+    "popularity": 89.3593875,
+    "genre": "blues-rock",
+    "hitCount": 1
+  },
+  {
+    "name": "Jimi Hendrix",
+    "decade": "1960s",
+    "popularity": 83.9849896,
+    "genre": "blues-rock",
+    "hitCount": 1
+  },
+  {
+    "name": "The Beatles / Tony Sheridan",
+    "decade": "1960s",
+    "popularity": 74.556417,
+    "genre": "merseybeat",
+    "hitCount": 1
+  },
+  {
+    "name": "Tommy James & The Shondells",
+    "decade": "1960s",
+    "popularity": 69.7241445,
+    "genre": "brill building pop",
+    "hitCount": 1
+  },
+  {
+    "name": "Hank Locklin",
+    "decade": "1960s",
+    "popularity": 69.0290538,
+    "genre": "honky tonk",
+    "hitCount": 1
+  },
+  {
+    "name": "Arthur Brown",
+    "decade": "1960s",
+    "popularity": 63.1436602,
+    "genre": "blues-rock",
+    "hitCount": 2
+  },
+  {
+    "name": "Sonny James",
+    "decade": "1960s",
+    "popularity": 62.3037476,
+    "genre": "country blues",
+    "hitCount": 1
+  },
+  {
+    "name": "Louis Prima And Keely Smith",
+    "decade": "1960s",
+    "popularity": 56.545101200000005,
+    "genre": "space age pop",
+    "hitCount": 1
+  },
+  {
+    "name": "Groundhogs",
+    "decade": "1960s",
+    "popularity": 55.802208900000004,
+    "genre": "blues-rock",
+    "hitCount": 1
+  },
+  {
+    "name": "Led Zeppelin",
+    "decade": "1970s",
+    "popularity": 100.0,
+    "genre": "blues-rock",
+    "hitCount": 1
+  },
+  {
+    "name": "Spooky Tooth / Mike Harrison",
+    "decade": "1970s",
+    "popularity": 80.7174434,
+    "genre": "blues-rock",
+    "hitCount": 1
+  },
+  {
+    "name": "Modern Lovers",
+    "decade": "1970s",
+    "popularity": 80.0078986,
+    "genre": "art rock",
+    "hitCount": 1
+  },
+  {
+    "name": "Dead Kennedys",
+    "decade": "1970s",
+    "popularity": 79.8895653,
+    "genre": "rock",
+    "hitCount": 1
+  },
+  {
+    "name": "Pink Floyd",
+    "decade": "1970s",
+    "popularity": 79.3471188,
+    "genre": "art rock",
+    "hitCount": 1
+  },
+  {
+    "name": "Jeff Beck",
+    "decade": "1970s",
+    "popularity": 73.7994182,
+    "genre": "blues-rock",
+    "hitCount": 1
+  },
+  {
+    "name": "The Rolling Stones",
+    "decade": "1970s",
+    "popularity": 73.5168669,
+    "genre": "blues",
+    "hitCount": 1
+  },
+  {
+    "name": "Paul Stanley",
+    "decade": "1970s",
+    "popularity": 70.5023456,
+    "genre": "hard rock",
+    "hitCount": 1
+  },
+  {
+    "name": "Public Image Ltd",
+    "decade": "1970s",
+    "popularity": 70.340222,
+    "genre": "dance rock",
+    "hitCount": 1
+  },
+  {
+    "name": "Taste",
+    "decade": "1970s",
+    "popularity": 69.8708462,
+    "genre": "blues-rock",
+    "hitCount": 1
+  },
+  {
+    "name": "Whitesnake",
+    "decade": "1980s",
+    "popularity": 85.25913800000001,
+    "genre": "blues-rock",
+    "hitCount": 1
+  },
+  {
+    "name": "The Cars",
+    "decade": "1980s",
+    "popularity": 83.30062430000001,
+    "genre": "new wave",
+    "hitCount": 1
+  },
+  {
+    "name": "Salt-N-Pepa",
+    "decade": "1980s",
+    "popularity": 80.6119769,
+    "genre": "pop rap",
+    "hitCount": 1
+  },
+  {
+    "name": "Wang Chung",
+    "decade": "1980s",
+    "popularity": 78.5025092,
+    "genre": "pop rock",
+    "hitCount": 1
+  },
+  {
+    "name": "The Velvet Underground",
+    "decade": "1980s",
+    "popularity": 78.2868999,
+    "genre": "experimental rock",
+    "hitCount": 1
+  },
+  {
+    "name": "Danger Danger",
+    "decade": "1980s",
+    "popularity": 77.2906696,
+    "genre": "glam metal",
+    "hitCount": 1
+  },
+  {
+    "name": "Madonna",
+    "decade": "1980s",
+    "popularity": 75.48040209999999,
+    "genre": "dance pop",
+    "hitCount": 2
+  },
+  {
+    "name": "Bruce Springsteen",
+    "decade": "1980s",
+    "popularity": 75.1580891,
+    "genre": "heartland rock",
+    "hitCount": 1
+  },
+  {
+    "name": "Gene Pitney",
+    "decade": "1980s",
+    "popularity": 73.292413,
+    "genre": "brill building pop",
+    "hitCount": 1
+  },
+  {
+    "name": "Circle Jerks",
+    "decade": "1980s",
+    "popularity": 73.0501483,
+    "genre": "hardcore punk",
+    "hitCount": 3
+  },
+  {
+    "name": "Pete Rock & C.L. Smooth",
+    "decade": "1990s",
+    "popularity": 93.2274163,
+    "genre": "jazz rap",
+    "hitCount": 1
+  },
+  {
+    "name": "Daft Punk",
+    "decade": "1990s",
+    "popularity": 86.22545000000001,
+    "genre": "techno",
+    "hitCount": 1
+  },
+  {
+    "name": "System of a Down",
+    "decade": "1990s",
+    "popularity": 84.98731240000001,
+    "genre": "alternative metal",
+    "hitCount": 1
+  },
+  {
+    "name": "Temple Of The Dog",
+    "decade": "1990s",
+    "popularity": 84.9019886,
+    "genre": "grunge",
+    "hitCount": 1
+  },
+  {
+    "name": "Lighthouse Family",
+    "decade": "1990s",
+    "popularity": 84.86167610000001,
+    "genre": "blue-eyed soul",
+    "hitCount": 1
+  },
+  {
+    "name": "Porcupine Tree",
+    "decade": "1990s",
+    "popularity": 80.15007825,
+    "genre": "experimental rock",
+    "hitCount": 2
+  },
+  {
+    "name": "Coldplay",
+    "decade": "1990s",
+    "popularity": 78.1932171,
+    "genre": "piano rock",
+    "hitCount": 1
+  },
+  {
+    "name": "The Tragically Hip",
+    "decade": "1990s",
+    "popularity": 76.6174644,
+    "genre": "roots rock",
+    "hitCount": 1
+  },
+  {
+    "name": "Kurupt",
+    "decade": "1990s",
+    "popularity": 76.2646815,
+    "genre": "gangster rap",
+    "hitCount": 1
+  },
+  {
+    "name": "Tad",
+    "decade": "1990s",
+    "popularity": 74.39437249999999,
+    "genre": "grunge",
+    "hitCount": 1
+  },
+  {
+    "name": "Sean Kingston",
+    "decade": "2000s",
+    "popularity": 91.7551963,
+    "genre": "reggae",
+    "hitCount": 1
+  },
+  {
+    "name": "Red Hot Chili Peppers",
+    "decade": "2000s",
+    "popularity": 91.1733498,
+    "genre": "rap rock",
+    "hitCount": 1
+  },
+  {
+    "name": "Dixie Chicks",
+    "decade": "2000s",
+    "popularity": 86.5831829,
+    "genre": "bluegrass",
+    "hitCount": 1
+  },
+  {
+    "name": "Porcupine Tree",
+    "decade": "2000s",
+    "popularity": 85.1693131,
+    "genre": "experimental rock",
+    "hitCount": 2
+  },
+  {
+    "name": "Charlotte Gainsbourg",
+    "decade": "2000s",
+    "popularity": 84.9796009,
+    "genre": "pop",
+    "hitCount": 3
+  },
+  {
+    "name": "The Maine",
+    "decade": "2000s",
+    "popularity": 84.967867,
+    "genre": "power pop",
+    "hitCount": 1
+  },
+  {
+    "name": "AFI",
+    "decade": "2000s",
+    "popularity": 84.412656725,
+    "genre": "post-hardcore",
+    "hitCount": 4
+  },
+  {
+    "name": "The White Stripes",
+    "decade": "2000s",
+    "popularity": 84.1714527,
+    "genre": "blues-rock",
+    "hitCount": 3
+  },
+  {
+    "name": "DAVE MATTHEWS BAND",
+    "decade": "2000s",
+    "popularity": 82.52329950000001,
+    "genre": "jam band",
+    "hitCount": 1
+  },
+  {
+    "name": "The Mars Volta",
+    "decade": "2000s",
+    "popularity": 81.23396435000001,
+    "genre": "experimental rock",
+    "hitCount": 4
+  },
+  {
+    "name": "B.o.B",
+    "decade": "2010s",
+    "popularity": 100.0,
+    "genre": "dirty south rap",
+    "hitCount": 1
+  },
+  {
+    "name": "Jack Johnson",
+    "decade": "2010s",
+    "popularity": 91.8534291,
+    "genre": "rock",
+    "hitCount": 1
+  },
+  {
+    "name": "Nick Jonas & The Administration",
+    "decade": "2010s",
+    "popularity": 82.2402885,
+    "genre": "blues-rock",
+    "hitCount": 1
+  },
+  {
+    "name": "Joe Bonamassa",
+    "decade": "2010s",
+    "popularity": 80.6399867,
+    "genre": "blues-rock",
+    "hitCount": 1
+  },
+  {
+    "name": "Usher",
+    "decade": "2010s",
+    "popularity": 78.56795869999999,
+    "genre": "hip hop",
+    "hitCount": 1
+  },
+  {
+    "name": "Dark Fortress",
+    "decade": "2010s",
+    "popularity": 75.4404411,
+    "genre": "sympho black metal",
+    "hitCount": 1
+  },
+  {
+    "name": "Sick Of It All",
+    "decade": "2010s",
+    "popularity": 74.8424605,
+    "genre": "hardcore punk",
+    "hitCount": 1
+  },
+  {
+    "name": "Zeromancer",
+    "decade": "2010s",
+    "popularity": 74.76994905000001,
+    "genre": "industrial rock",
+    "hitCount": 2
+  },
+  {
+    "name": "Daddy Yankee",
+    "decade": "2010s",
+    "popularity": 74.49865100000001,
+    "genre": "reggaeton",
+    "hitCount": 1
+  },
+  {
+    "name": "Four Tet",
+    "decade": "2010s",
+    "popularity": 70.4239415,
+    "genre": "electronic",
+    "hitCount": 1
+  }
 ]
-

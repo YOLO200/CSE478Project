@@ -42,21 +42,26 @@ This project tells the visual data story of how popular music has transformed ov
 
 ## Dataset Sources
 
-1. **Spotify Tracks Dataset**
-   - Source: https://www.kaggle.com/datasets/zaheenhamidani/ultimate-spotify-tracks-db
-   - Size: 160,000+ songs
-   - Key attributes: track_name, artist_name, genre, year, popularity, danceability, energy, valence, loudness, tempo, acousticness
-
-2. **Million Song Dataset**
+1. **Million Song Dataset (Primary)**
    - Source: https://corgis-edu.github.io/corgis/csv/music/
-   - Purpose: Validation and additional temporal analysis
+   - File: `music.csv` (10,000 records)
+   - Key attributes: artist_name, song.title, song.year, song.tempo, song.loudness, song.duration, song.hotttnesss
+   - **Status:** Currently in use - provides year data required for temporal analysis
+
+2. **Spotify Tracks Dataset (Available)**
+   - Source: https://www.kaggle.com/datasets/zaheenhamidani/ultimate-spotify-tracks-db
+   - File: `SpotifyFeatures.csv` (232,725 records)
+   - Key attributes: track_name, artist_name, genre, popularity, danceability, energy, valence, loudness, tempo, acousticness
+   - **Note:** Available in project but missing `year` column, so currently not used as primary dataset
 
 ## Setup and Installation
 
 ### Prerequisites
 
 - A modern web browser (Chrome, Firefox, Safari, Edge)
+- Python 3.x with pandas, numpy, and python-dateutil (for data processing)
 - A local web server (VS Code Live Server, Python http.server, or similar)
+- `music.csv` file in the project root directory
 
 ### Installation Steps
 
@@ -65,14 +70,23 @@ This project tells the visual data story of how popular music has transformed ov
    cd CSE478Project
    ```
 
-2. **Data Processing (Optional):**
-   If you have the raw Spotify dataset, you can process it:
+2. **Data Processing (Required):**
+   The project uses real data from `music.csv`. Process it before running:
    ```bash
-   cd data
-   python3 process_data.py
+   python3 data/process_data.py
    ```
    
-   Note: The project includes pre-processed JSON data files in `data/processed/` that can be used directly.
+   This will:
+   - Load `music.csv` from the project root
+   - Process and aggregate data by decade
+   - Generate JSON files in `data/processed/`
+   
+   **Requirements:**
+   ```bash
+   pip3 install pandas numpy python-dateutil
+   ```
+   
+   **Note:** The script will automatically use `music.csv` if available. Make sure `music.csv` is in the project root directory.
 
 3. **Start a local web server:**
    
@@ -111,14 +125,16 @@ CSE478Project/
 │       ├── bubbleChart.js    # Top Artists
 │       └── radialSpectrum.js # Innovative radial view
 ├── data/
-│   ├── process_data.py       # Data processing script
-│   └── processed/            # Pre-processed JSON files
-│       ├── by_decade.json
-│       ├── by_genre.json
-│       ├── energy_danceability.json
-│       ├── top_artists.json
-│       └── radial_data.json
-├── assets/                   # Images, fonts, etc.
+│   ├── process_data.py       # Data processing script (Python)
+│   └── processed/            # Generated JSON files (after processing)
+│       ├── by_decade.json    # Popularity trends by decade
+│       ├── by_genre.json     # Genre distributions by decade
+│       ├── energy_danceability.json  # Sample points for scatterplot
+│       ├── top_artists.json  # Top artists per decade
+│       └── radial_data.json  # Aggregated features for radial chart
+├── music.csv                 # Million Song Dataset (source data)
+├── SpotifyFeatures.csv       # Spotify dataset (available but not used)
+├── WIP_Report.md             # Work-in-progress report
 └── README.md                 # This file
 ```
 
@@ -126,21 +142,40 @@ CSE478Project/
 
 The `data/process_data.py` script performs the following operations:
 
-1. Loads and cleans the Spotify dataset
-2. Filters data by year (1960-2024)
-3. Aggregates data by decade
-4. Calculates statistics for audio features
-5. Extracts genre distributions
-6. Identifies top artists per decade
-7. Exports processed data to JSON format
+1. **Loads data:** Reads `music.csv` from the project root directory
+2. **Cleans data:** Removes invalid years, handles missing values
+3. **Converts data:** Maps Million Song Dataset columns to expected format
+   - `song.year` → `year`
+   - `artist.name` → `artist_name`
+   - `song.title` → `track_name`
+   - `song.hotttnesss` → `popularity` (scaled 0-100)
+   - Calculates missing features (energy, danceability) from available data
+4. **Filters by year:** Keeps only records from 1960-2024
+5. **Aggregates by decade:** Groups data into 1960s, 1970s, 1980s, 1990s, 2000s, 2010s
+6. **Generates visualizations data:**
+   - Popularity trends by decade
+   - Genre distributions (from artist.terms)
+   - Energy vs. Danceability samples
+   - Top artists per decade
+   - Radial spectrum aggregations
+7. **Exports JSON:** Saves processed data to `data/processed/` directory
 
-To run the data processing:
+### Processing Statistics
+After processing, you should see:
+- **Processed records:** ~4,600+ songs (from 10,000 total)
+- **Decades covered:** 1960s through 2010s
+- **Genres identified:** 30+ distinct genres
+
+### Running Data Processing:
 ```bash
-cd data
-python3 process_data.py
+# Install dependencies
+pip3 install pandas numpy python-dateutil
+
+# Run processing script
+python3 data/process_data.py
 ```
 
-Make sure to place the raw CSV file (`spotify_tracks.csv`) in the `data/` directory before running the script.
+**Important:** Place `music.csv` in the project root directory (not in `data/`) before running the script. The script will automatically detect and use it.
 
 ## Visualization Details
 
@@ -152,12 +187,17 @@ Shows the average popularity score of tracks across decades, revealing trends in
 - Interactive tooltips with detailed information
 
 ### 2. Stacked Bar Chart - Genre Composition
-Visualizes the percentage distribution of genres across decades, showing how musical styles have shifted over time.
+Visualizes the percentage distribution of genres across decades, showing how musical styles have shifted over time. Each bar represents a decade and shows the proportional share of different genres.
+
+**Features:**
+- Multi-column legend organized alphabetically
+- "Other" category for genres not in top 10
+- All bars stack to 100%
 
 **Interactivity:**
-- Hover to highlight specific genres
-- Click legend items to filter
-- Tooltips show genre percentages
+- Hover over legend items to highlight specific genres in the chart
+- Hover over bars to see genre percentages in tooltips
+- Interactive legend with visual feedback
 
 ### 3. Scatterplot - Energy vs. Danceability
 Explores the relationship between energy and danceability, with color encoding by decade.
@@ -176,18 +216,27 @@ Force-directed bubble chart showing top artists by decade, with bubble size repr
 - Force simulation for natural layout
 
 ### 5. Radial Sound Spectrum (Innovative View)
-Custom radial visualization that encodes:
-- **Radial Distance:** Energy level
-- **Angle:** Tempo (mapped to clock position)
-- **Color:** Valence (emotional tone)
-- **Thickness:** Loudness
+Custom radial visualization that encodes multiple audio features in a novel radial encoding:
+- **Radial Distance:** Energy level (outer radius represents higher energy)
+- **Angle:** Tempo (mapped to clock position, indicating song pace)
+- **Color:** Valence (emotional tone - warmer colors for positive, cooler for negative)
+  - Uses Viridis color scheme for better readability
+- **Thickness:** Loudness (thicker lines indicate louder tracks)
+- **Center Circle:** Current decade with energy value display
 
-**Innovation:** This visualization combines multiple audio features in a novel radial encoding that allows direct comparison across decades. The concentric rings show the evolution of the "sonic fingerprint" over time.
+**Innovation:** This visualization combines multiple audio features in a novel radial encoding that allows direct comparison across decades. The concentric rings show the evolution of the "sonic fingerprint" over time. Each ring represents a different decade, with the active decade highlighted at full opacity.
+
+**Features:**
+- All decades visible simultaneously with varying opacity
+- Active decade highlighted with increased opacity and white stroke
+- Enhanced text shadows for better readability
+- Smooth transitions between decades
 
 **Interactivity:**
 - Previous/Next buttons to navigate decades
-- Hover over rings to see details
-- Click rings to switch active decade
+- Hover over rings to switch to that decade
+- Active ring highlighted with increased opacity and shadow
+- Tooltips show decade statistics
 
 ## Browser Compatibility
 
@@ -203,6 +252,18 @@ Tested and working on:
 - Visualizations use efficient D3.js data binding
 - SVG rendering is optimized for smooth interactions
 - Responsive design adapts to different screen sizes
+- Debug logging available in browser console for troubleshooting
+
+## Current Data Status
+
+**✅ Processed and Active:**
+- Using real data from `music.csv` (Million Song Dataset)
+- ~4,634 valid records spanning 1960s-2010s
+- All visualizations use actual processed data
+
+**Data Files:**
+- `music.csv` - Source data with year information (required)
+- `data/processed/*.json` - Generated visualization data (auto-created by script)
 
 ## Accessibility Features
 
@@ -225,12 +286,30 @@ Tested and working on:
 
 This project is created for educational purposes as part of CSE 478 course requirements.
 
+## Troubleshooting
+
+### Charts Not Rendering
+1. Check browser console for error messages
+2. Verify data files exist in `data/processed/`
+3. Run `python3 data/process_data.py` to regenerate data files
+4. Ensure you're using a local web server (not opening `index.html` directly)
+
+### Data Issues
+- If charts show "0%" or negative values, check that `music.csv` is in the project root
+- Verify Python dependencies are installed: `pip3 install pandas numpy python-dateutil`
+- Check console logs for data loading debug information
+
+### Layout Issues
+- Legend may appear in multiple columns if there are many genres
+- Chart width automatically adjusts to accommodate legend
+- On smaller screens, visualizations will stack vertically
+
 ## Acknowledgments
 
-- Spotify for providing the tracks dataset
-- CORGIS for the Million Song Dataset
-- D3.js community for excellent documentation
-- Scrollama.js for scrollytelling functionality
+- **CORGIS** for the Million Song Dataset (primary data source)
+- **Spotify** for providing audio feature data standards
+- **D3.js** community for excellent documentation and examples
+- **Scrollama.js** for scrollytelling functionality
 
 ## Contact
 

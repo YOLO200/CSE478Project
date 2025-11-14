@@ -9,29 +9,55 @@ class LineChart {
         this.xScale = null;
         this.yScale = null;
         this.data = null;
+        this.isResizing = false;
     }
 
     init(data) {
+        console.log('[LineChart] Initialization started');
+        console.log('[LineChart] Container ID:', this.containerId);
+        console.log('[LineChart] Data received:', data);
+        
         if (!data || data.length === 0) {
-            console.error('No data provided to line chart');
+            console.error('[LineChart] ERROR: No data provided to line chart');
             return;
         }
+        
+        console.log('[LineChart] Data length:', data.length);
         this.data = data;
         this.setupSVG();
         this.drawChart();
+        console.log('[LineChart] Initialization complete');
     }
 
     setupSVG() {
+        console.log('[LineChart] Setting up SVG for container:', this.containerId);
         const container = d3.select(`#${this.containerId}`);
+        
         if (container.empty()) {
-            console.error(`Container #${this.containerId} not found`);
+            console.error(`[LineChart] ERROR: Container #${this.containerId} not found`);
             return;
         }
+        
+        const containerNode = container.node();
+        const containerRect = containerNode.getBoundingClientRect();
+        console.log('[LineChart] Container found. Dimensions:', {
+            width: containerRect.width,
+            height: containerRect.height,
+            visible: containerRect.width > 0 && containerRect.height > 0
+        });
         
         container.selectAll('*').remove();
 
         const containerWidth = container.node().getBoundingClientRect().width || 800;
         this.width = Math.max(600, containerWidth - this.margin.left - this.margin.right);
+        
+        console.log('[LineChart] Calculated dimensions:', {
+            containerWidth,
+            chartWidth: this.width,
+            chartHeight: this.height,
+            totalWidth: this.width + this.margin.left + this.margin.right,
+            totalHeight: this.height + this.margin.top + this.margin.bottom
+        });
 
         this.svg = container
             .append('svg')
@@ -39,6 +65,8 @@ class LineChart {
             .attr('height', this.height + this.margin.top + this.margin.bottom)
             .append('g')
             .attr('transform', `translate(${this.margin.left},${this.margin.top})`);
+        
+        console.log('[LineChart] SVG created successfully');
 
         this.xScale = d3.scaleBand()
             .domain(this.data.map(d => d.decade))
@@ -46,6 +74,12 @@ class LineChart {
             .padding(0.2);
 
         const maxPopularity = d3.max(this.data, d => d.avgPopularity) || 100;
+        console.log('[LineChart] Popularity range:', {
+            min: d3.min(this.data, d => d.avgPopularity),
+            max: maxPopularity,
+            yDomain: [0, Math.max(100, maxPopularity * 1.1)]
+        });
+        
         this.yScale = d3.scaleLinear()
             .domain([0, Math.max(100, maxPopularity * 1.1)])
             .nice()
@@ -53,9 +87,20 @@ class LineChart {
     }
 
     drawChart() {
-        if (!this.svg || !this.data) return;
+        console.log('[LineChart] Drawing chart');
+        
+        if (!this.svg) {
+            console.error('[LineChart] ERROR: SVG not initialized');
+            return;
+        }
+        
+        if (!this.data) {
+            console.error('[LineChart] ERROR: Data not available');
+            return;
+        }
 
         this.drawAxes();
+        console.log('[LineChart] Axes drawn');
 
         const line = d3.line()
             .x(d => this.xScale(d.decade) + this.xScale.bandwidth() / 2)
@@ -96,6 +141,9 @@ class LineChart {
             .attr('font-size', '12px')
             .attr('fill', '#666')
             .text(d => d.decade);
+        
+        console.log('[LineChart] Chart drawing complete');
+        console.log('[LineChart] Data points:', this.data.length);
     }
 
     drawAxes() {
@@ -149,9 +197,12 @@ class LineChart {
     }
 
     resize() {
-        if (this.data) {
+        if (this.data && !this.isResizing) {
+            this.isResizing = true;
+            console.log('[LineChart] Resizing chart');
             this.setupSVG();
             this.drawChart();
+            this.isResizing = false;
         }
     }
 }

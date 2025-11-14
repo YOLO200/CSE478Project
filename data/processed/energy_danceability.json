@@ -1,17 +1,4002 @@
 [
-  {"decade": "1960s", "energy": 0.45, "danceability": 0.52, "popularity": 35, "genre": "Rock", "year": 1965},
-  {"decade": "1960s", "energy": 0.58, "danceability": 0.68, "popularity": 42, "genre": "Pop", "year": 1967},
-  {"decade": "1970s", "energy": 0.62, "danceability": 0.71, "popularity": 48, "genre": "Disco", "year": 1976},
-  {"decade": "1970s", "energy": 0.78, "danceability": 0.55, "popularity": 52, "genre": "Rock", "year": 1973},
-  {"decade": "1980s", "energy": 0.68, "danceability": 0.75, "popularity": 55, "genre": "Pop", "year": 1984},
-  {"decade": "1980s", "energy": 0.72, "danceability": 0.82, "popularity": 58, "genre": "Hip-Hop", "year": 1988},
-  {"decade": "1990s", "energy": 0.65, "danceability": 0.78, "popularity": 60, "genre": "Pop", "year": 1995},
-  {"decade": "1990s", "energy": 0.82, "danceability": 0.88, "popularity": 62, "genre": "Hip-Hop", "year": 1998},
-  {"decade": "2000s", "energy": 0.70, "danceability": 0.80, "popularity": 65, "genre": "Pop", "year": 2005},
-  {"decade": "2000s", "energy": 0.75, "danceability": 0.85, "popularity": 68, "genre": "Hip-Hop", "year": 2007},
-  {"decade": "2010s", "energy": 0.72, "danceability": 0.82, "popularity": 70, "genre": "Pop", "year": 2015},
-  {"decade": "2010s", "energy": 0.80, "danceability": 0.90, "popularity": 73, "genre": "Hip-Hop", "year": 2018},
-  {"decade": "2020s", "energy": 0.75, "danceability": 0.85, "popularity": 75, "genre": "Pop", "year": 2022},
-  {"decade": "2020s", "energy": 0.82, "danceability": 0.92, "popularity": 78, "genre": "Electronic", "year": 2023}
+  {
+    "decade": "1990s",
+    "energy": 0.7797666666666667,
+    "danceability": 0.5586642857142857,
+    "popularity": 0.0,
+    "genre": "chamber jazz",
+    "year": 1990
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7414833333333334,
+    "danceability": 0.533992857142857,
+    "popularity": 0.0,
+    "genre": "soundtrack",
+    "year": 1993
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9200166666666667,
+    "danceability": 0.46317857142857144,
+    "popularity": 0.0,
+    "genre": "symphonic rock",
+    "year": 2002
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8058166666666667,
+    "danceability": 0.46177142857142855,
+    "popularity": 0.0,
+    "genre": "honky tonk",
+    "year": 1993
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8963,
+    "danceability": 0.8163357142857143,
+    "popularity": 0.0,
+    "genre": "speedcore",
+    "year": 2000
+  },
+  {
+    "decade": "1960s",
+    "energy": 0.8029,
+    "danceability": 0.5059357142857142,
+    "popularity": 41.3752422,
+    "genre": "space age pop",
+    "year": 1969
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.6638000000000001,
+    "danceability": 0.3578571428571428,
+    "popularity": 0.0,
+    "genre": "experimental rock",
+    "year": 1973
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8119833333333334,
+    "danceability": 0.3152214285714286,
+    "popularity": 28.7643396,
+    "genre": "vocal jazz",
+    "year": 2005
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8712666666666666,
+    "danceability": 0.4375714285714286,
+    "popularity": 32.3112121,
+    "genre": "jazz funk",
+    "year": 2000
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.93245,
+    "danceability": 0.46337142857142855,
+    "popularity": 33.4706549,
+    "genre": "doom metal",
+    "year": 2006
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.77755,
+    "danceability": 0.10792857142857143,
+    "popularity": 48.9038209,
+    "genre": "latin jazz",
+    "year": 1980
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9343,
+    "danceability": 0.6574357142857142,
+    "popularity": 61.6433818,
+    "genre": "blues-rock",
+    "year": 2007
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.6072833333333333,
+    "danceability": 0.7181857142857142,
+    "popularity": 49.9752328,
+    "genre": "techno",
+    "year": 1995
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.7443000000000001,
+    "danceability": 0.29732857142857144,
+    "popularity": 0.0,
+    "genre": "classic country",
+    "year": 1976
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8534333333333334,
+    "danceability": 0.37147142857142856,
+    "popularity": 23.962909800000002,
+    "genre": "flamenco",
+    "year": 2005
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8857499999999999,
+    "danceability": 0.31987857142857146,
+    "popularity": 62.0923593,
+    "genre": "trip hop",
+    "year": 2004
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8681,
+    "danceability": 0.0,
+    "popularity": 0.0,
+    "genre": "country",
+    "year": 1999
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.8988166666666667,
+    "danceability": 0.7524714285714286,
+    "popularity": 0.0,
+    "genre": "salsa",
+    "year": 1972
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8741,
+    "danceability": 0.4733857142857143,
+    "popularity": 46.0484845,
+    "genre": "ska punk",
+    "year": 1997
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7737833333333334,
+    "danceability": 0.21436428571428567,
+    "popularity": 0.0,
+    "genre": "freestyle",
+    "year": 1990
+  },
+  {
+    "decade": "2010s",
+    "energy": 0.8919833333333334,
+    "danceability": 0.5732785714285713,
+    "popularity": 60.303014499999996,
+    "genre": "post-grunge",
+    "year": 2010
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8581333333333333,
+    "danceability": 0.4394571428571429,
+    "popularity": 69.84944680000001,
+    "genre": "hardcore punk",
+    "year": 1994
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9016000000000001,
+    "danceability": 0.6791,
+    "popularity": 0.0,
+    "genre": "los angeles",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.92195,
+    "danceability": 0.028614285714285717,
+    "popularity": 64.2091038,
+    "genre": "stoner rock",
+    "year": 2003
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.89695,
+    "danceability": 0.36029285714285714,
+    "popularity": 0.0,
+    "genre": "stoner metal",
+    "year": 2009
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7730833333333333,
+    "danceability": 0.5141214285714286,
+    "popularity": 0.0,
+    "genre": "pop rap",
+    "year": 1996
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8417833333333333,
+    "danceability": 0.2542571428571429,
+    "popularity": 0.0,
+    "genre": "hardcore techno",
+    "year": 1995
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8681666666666668,
+    "danceability": 0.44062142857142855,
+    "popularity": 0.0,
+    "genre": "latin pop",
+    "year": 2009
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.8019833333333334,
+    "danceability": 0.6603428571428572,
+    "popularity": 0.0,
+    "genre": "motown",
+    "year": 1972
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8921833333333333,
+    "danceability": 0.29847142857142855,
+    "popularity": 63.4031023,
+    "genre": "reggae",
+    "year": 2002
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8798333333333334,
+    "danceability": 0.17627857142857145,
+    "popularity": 0.0,
+    "genre": "indie rock",
+    "year": 2008
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7189166666666668,
+    "danceability": 0.9487071428571427,
+    "popularity": 0.0,
+    "genre": "chamber jazz",
+    "year": 1993
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8365333333333334,
+    "danceability": 0.24789285714285714,
+    "popularity": 61.40061730000001,
+    "genre": "soft rock",
+    "year": 1993
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9152166666666666,
+    "danceability": 0.4927714285714286,
+    "popularity": 0.0,
+    "genre": "dance rock",
+    "year": 2008
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8997333333333334,
+    "danceability": 0.7715214285714286,
+    "popularity": 48.456253,
+    "genre": "dancehall",
+    "year": 1997
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8951333333333333,
+    "danceability": 0.2750928571428572,
+    "popularity": 66.4542415,
+    "genre": "nu metal",
+    "year": 2001
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.8678666666666667,
+    "danceability": 0.9716714285714285,
+    "popularity": 0.0,
+    "genre": "british pop",
+    "year": 1989
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8159500000000001,
+    "danceability": 0.21584285714285717,
+    "popularity": 40.5115722,
+    "genre": "gangster rap",
+    "year": 1997
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7499,
+    "danceability": 0.32203571428571426,
+    "popularity": 46.8997788,
+    "genre": "jungle music",
+    "year": 2000
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.7306833333333334,
+    "danceability": 0.25483571428571433,
+    "popularity": 0.0,
+    "genre": "texas blues",
+    "year": 1989
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8844833333333334,
+    "danceability": 0.39309285714285713,
+    "popularity": 59.024059799999996,
+    "genre": "dark wave",
+    "year": 2007
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.8384,
+    "danceability": 0.6079642857142857,
+    "popularity": 54.9998637,
+    "genre": "british pop",
+    "year": 1977
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8290000000000001,
+    "danceability": 0.31640000000000007,
+    "popularity": 44.791544300000005,
+    "genre": "alternative rock",
+    "year": 2007
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8835666666666667,
+    "danceability": 0.6280571428571429,
+    "popularity": 79.080308,
+    "genre": "bluegrass",
+    "year": 2003
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.8692666666666666,
+    "danceability": 0.2692928571428571,
+    "popularity": 0.0,
+    "genre": "blues-rock",
+    "year": 1974
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8691333333333333,
+    "danceability": 0.5000142857142857,
+    "popularity": 0.0,
+    "genre": "progressive house",
+    "year": 1998
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9436333333333333,
+    "danceability": 0.42887142857142857,
+    "popularity": 51.35170289999999,
+    "genre": "industrial dance",
+    "year": 2006
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.855,
+    "danceability": 0.19265000000000002,
+    "popularity": 38.6790177,
+    "genre": "dance pop",
+    "year": 2005
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9341333333333334,
+    "danceability": 0.8867857142857143,
+    "popularity": 34.5802234,
+    "genre": "hip hop",
+    "year": 2000
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.8335,
+    "danceability": 0.6174642857142857,
+    "popularity": 0.0,
+    "genre": "roots reggae",
+    "year": 1981
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8662500000000001,
+    "danceability": 0.19227142857142862,
+    "popularity": 63.1008059,
+    "genre": "underground rap",
+    "year": 2001
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8799666666666667,
+    "danceability": 0.4717071428571429,
+    "popularity": 0.0,
+    "genre": "hip house",
+    "year": 1990
+  },
+  {
+    "decade": "1960s",
+    "energy": 0.85595,
+    "danceability": 0.45272142857142855,
+    "popularity": 0.0,
+    "genre": "rock 'n roll",
+    "year": 1967
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8548333333333333,
+    "danceability": 0.6418857142857143,
+    "popularity": 0.0,
+    "genre": "hard house",
+    "year": 2001
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.7056,
+    "danceability": 0.42420714285714284,
+    "popularity": 44.545452600000004,
+    "genre": "blue-eyed soul",
+    "year": 1978
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.9071833333333333,
+    "danceability": 0.7544357142857143,
+    "popularity": 45.0992312,
+    "genre": "oi",
+    "year": 1987
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.8117,
+    "danceability": 0.5925928571428571,
+    "popularity": 65.7161336,
+    "genre": "brill building pop",
+    "year": 1989
+  },
+  {
+    "decade": "1960s",
+    "energy": 0.6006,
+    "danceability": 0.6421428571428572,
+    "popularity": 0.0,
+    "genre": "folk-pop",
+    "year": 1968
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.8436666666666667,
+    "danceability": 0.16950000000000004,
+    "popularity": 56.1428518,
+    "genre": "pop rock",
+    "year": 1987
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8820666666666667,
+    "danceability": 0.31046428571428575,
+    "popularity": 0.0,
+    "genre": "neo soul",
+    "year": 2008
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9075166666666666,
+    "danceability": 0.8064928571428571,
+    "popularity": 0.0,
+    "genre": "blues-rock",
+    "year": 2002
+  },
+  {
+    "decade": "2010s",
+    "energy": 0.8505666666666667,
+    "danceability": 0.5712285714285715,
+    "popularity": 62.646424,
+    "genre": "sludge metal",
+    "year": 2010
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.84735,
+    "danceability": 0.18143571428571426,
+    "popularity": 27.0775999,
+    "genre": "blues-rock",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8068666666666666,
+    "danceability": 0.42579999999999996,
+    "popularity": 68.2112971,
+    "genre": "pop rap",
+    "year": 2008
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8520333333333333,
+    "danceability": 0.029292857142857138,
+    "popularity": 0.0,
+    "genre": "pop rock",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9007166666666666,
+    "danceability": 0.5785500000000001,
+    "popularity": 0.0,
+    "genre": "hard trance",
+    "year": 2000
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8809166666666667,
+    "danceability": 0.42902857142857137,
+    "popularity": 69.31497399999999,
+    "genre": "sympho black metal",
+    "year": 1997
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.7927333333333333,
+    "danceability": 0.35036428571428574,
+    "popularity": 26.6955186,
+    "genre": "pop rock",
+    "year": 1989
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.7746,
+    "danceability": 0.32102142857142857,
+    "popularity": 0.0,
+    "genre": "country rock",
+    "year": 1987
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7816333333333333,
+    "danceability": 0.6587642857142857,
+    "popularity": 0.0,
+    "genre": "gangster rap",
+    "year": 2007
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7707999999999999,
+    "danceability": 0.28806428571428566,
+    "popularity": 0.0,
+    "genre": "smooth jazz",
+    "year": 1993
+  },
+  {
+    "decade": "1960s",
+    "energy": 0.8634666666666667,
+    "danceability": 0.46448571428571434,
+    "popularity": 0.0,
+    "genre": "salsa",
+    "year": 1968
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8364499999999999,
+    "danceability": 0.601157142857143,
+    "popularity": 47.911608900000004,
+    "genre": "brazilian pop music",
+    "year": 1992
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8526166666666666,
+    "danceability": 0.4713285714285715,
+    "popularity": 73.3990879,
+    "genre": "alternative country",
+    "year": 2003
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.874,
+    "danceability": 0.4044642857142857,
+    "popularity": 0.0,
+    "genre": "honky tonk",
+    "year": 1996
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8870666666666668,
+    "danceability": 0.2859571428571429,
+    "popularity": 50.766947200000004,
+    "genre": "christian hardcore",
+    "year": 2005
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8221333333333334,
+    "danceability": 0.31411428571428573,
+    "popularity": 59.5478748,
+    "genre": "blues-rock",
+    "year": 1991
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7349833333333334,
+    "danceability": 0.51,
+    "popularity": 0.0,
+    "genre": "rock",
+    "year": 2000
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8579166666666667,
+    "danceability": 0.47139285714285717,
+    "popularity": 26.586104900000002,
+    "genre": "tech house",
+    "year": 2007
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7599,
+    "danceability": 0.9080571428571428,
+    "popularity": 0.0,
+    "genre": "country rock",
+    "year": 1993
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.89515,
+    "danceability": 0.20035714285714284,
+    "popularity": 42.8702263,
+    "genre": "post rock",
+    "year": 2002
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8668333333333333,
+    "danceability": 0.7141071428571428,
+    "popularity": 42.744657200000006,
+    "genre": "hip hop",
+    "year": 2001
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.903,
+    "danceability": 0.45604999999999996,
+    "popularity": 52.7555356,
+    "genre": "disco",
+    "year": 2004
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7716333333333334,
+    "danceability": 0.5759857142857143,
+    "popularity": 0.0,
+    "genre": "sludge metal",
+    "year": 1991
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9395166666666667,
+    "danceability": 0.48570714285714284,
+    "popularity": 0.0,
+    "genre": "dance pop",
+    "year": 2008
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8811333333333333,
+    "danceability": 0.583607142857143,
+    "popularity": 51.7789044,
+    "genre": "country",
+    "year": 1998
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8071,
+    "danceability": 0.1580285714285714,
+    "popularity": 59.711670299999994,
+    "genre": "folk-pop",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9433,
+    "danceability": 1.0,
+    "popularity": 54.7952942,
+    "genre": "death core",
+    "year": 2008
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8893833333333333,
+    "danceability": 0.4495285714285714,
+    "popularity": 51.5963631,
+    "genre": "electronic",
+    "year": 2009
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8427833333333333,
+    "danceability": 0.9987571428571428,
+    "popularity": 0.0,
+    "genre": "tejano",
+    "year": 1996
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.89325,
+    "danceability": 0.4744857142857143,
+    "popularity": 54.049312900000004,
+    "genre": "blackened death metal",
+    "year": 2008
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7020000000000001,
+    "danceability": 0.08154285714285713,
+    "popularity": 46.7365631,
+    "genre": "techno",
+    "year": 1994
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8868333333333334,
+    "danceability": 0.0,
+    "popularity": 29.987748800000002,
+    "genre": "hip hop",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8549666666666667,
+    "danceability": 0.09202857142857143,
+    "popularity": 0.0,
+    "genre": "reggae",
+    "year": 2004
+  },
+  {
+    "decade": "1960s",
+    "energy": 0.7475,
+    "danceability": 0.6375142857142858,
+    "popularity": 0.0,
+    "genre": "ballad",
+    "year": 1966
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8956833333333333,
+    "danceability": 0.6422357142857144,
+    "popularity": 66.7279494,
+    "genre": "hip hop",
+    "year": 2003
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8083666666666667,
+    "danceability": 0.8101642857142858,
+    "popularity": 47.6248227,
+    "genre": "hip hop",
+    "year": 1990
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.865,
+    "danceability": 0.19361428571428568,
+    "popularity": 51.1424326,
+    "genre": "post-grunge",
+    "year": 2005
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7989833333333334,
+    "danceability": 0.5001428571428572,
+    "popularity": 0.0,
+    "genre": "country rock",
+    "year": 1999
+  },
+  {
+    "decade": "1960s",
+    "energy": 0.65515,
+    "danceability": 0.1986142857142857,
+    "popularity": 43.669616500000004,
+    "genre": "country rock",
+    "year": 1960
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8068333333333333,
+    "danceability": 0.5428785714285713,
+    "popularity": 43.483809,
+    "genre": "electronica",
+    "year": 2000
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.9033833333333334,
+    "danceability": 0.3404928571428571,
+    "popularity": 0.0,
+    "genre": "country",
+    "year": 1999
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7626166666666666,
+    "danceability": 0.19927857142857144,
+    "popularity": 0.0,
+    "genre": "country blues",
+    "year": 2005
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8166333333333333,
+    "danceability": 0.6287285714285714,
+    "popularity": 49.7439048,
+    "genre": "country blues",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9161833333333333,
+    "danceability": 0.9480357142857142,
+    "popularity": 66.6532379,
+    "genre": "death core",
+    "year": 2008
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.8395333333333334,
+    "danceability": 0.45775714285714286,
+    "popularity": 71.4046553,
+    "genre": "dance rock",
+    "year": 1986
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.81565,
+    "danceability": 0.14345714285714287,
+    "popularity": 47.5638468,
+    "genre": "chanson",
+    "year": 2004
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9323666666666667,
+    "danceability": 0.59465,
+    "popularity": 0.0,
+    "genre": "math-core",
+    "year": 2003
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9138833333333333,
+    "danceability": 0.17865714285714285,
+    "popularity": 0.0,
+    "genre": "hip hop",
+    "year": 2003
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9476833333333333,
+    "danceability": 0.5359785714285715,
+    "popularity": 0.0,
+    "genre": "progressive house",
+    "year": 2003
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.93055,
+    "danceability": 0.5085071428571428,
+    "popularity": 53.5953802,
+    "genre": "progressive metal",
+    "year": 1997
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8668,
+    "danceability": 0.7474857142857143,
+    "popularity": 42.744657200000006,
+    "genre": "louisiana blues",
+    "year": 1993
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7542000000000001,
+    "danceability": 0.4459142857142857,
+    "popularity": 60.7036691,
+    "genre": "british pop",
+    "year": 1993
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.82885,
+    "danceability": 0.32805000000000006,
+    "popularity": 0.0,
+    "genre": "soul blues",
+    "year": 2006
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7617999999999999,
+    "danceability": 0.7662714285714285,
+    "popularity": 0.0,
+    "genre": "lovers rock",
+    "year": 1991
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.9401666666666666,
+    "danceability": 0.3051714285714286,
+    "popularity": 69.04735389999999,
+    "genre": "rap metal",
+    "year": 1997
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.6560166666666667,
+    "danceability": 0.21875,
+    "popularity": 66.3811904,
+    "genre": "post-hardcore",
+    "year": 2004
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.7944666666666667,
+    "danceability": 0.5537285714285713,
+    "popularity": 49.5293621,
+    "genre": "pop rock",
+    "year": 1985
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8914500000000001,
+    "danceability": 0.5566999999999999,
+    "popularity": 0.0,
+    "genre": "gabba",
+    "year": 2005
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9045666666666666,
+    "danceability": 0.16667857142857137,
+    "popularity": 67.9854,
+    "genre": "post-hardcore",
+    "year": 2008
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.8660166666666667,
+    "danceability": 0.11347857142857143,
+    "popularity": 0.0,
+    "genre": "blues-rock",
+    "year": 1983
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8958666666666667,
+    "danceability": 0.4651857142857143,
+    "popularity": 40.1486711,
+    "genre": "deathrock",
+    "year": 2004
+  },
+  {
+    "decade": "1960s",
+    "energy": 0.8856166666666667,
+    "danceability": 0.44956428571428564,
+    "popularity": 39.439485600000005,
+    "genre": "doo-wop",
+    "year": 1963
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8730333333333333,
+    "danceability": 0.25480714285714284,
+    "popularity": 0.0,
+    "genre": "flamenco",
+    "year": 2002
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7587499999999999,
+    "danceability": 0.47136428571428574,
+    "popularity": 0.0,
+    "genre": "eurodance",
+    "year": 2003
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.86955,
+    "danceability": 0.3863428571428571,
+    "popularity": 62.8296796,
+    "genre": "blues-rock",
+    "year": 1990
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9288000000000001,
+    "danceability": 0.672092857142857,
+    "popularity": 0.0,
+    "genre": "chill-out",
+    "year": 2006
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7708333333333334,
+    "danceability": 0.30898571428571425,
+    "popularity": 21.204540599999998,
+    "genre": "blues-rock",
+    "year": 1996
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.87555,
+    "danceability": 0.7152714285714286,
+    "popularity": 60.168624400000006,
+    "genre": "ska punk",
+    "year": 1994
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8981,
+    "danceability": 0.7069428571428572,
+    "popularity": 0.0,
+    "genre": "dance-punk",
+    "year": 2006
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.7865333333333333,
+    "danceability": 0.34981428571428574,
+    "popularity": 0.0,
+    "genre": "country rock",
+    "year": 1987
+  },
+  {
+    "decade": "1960s",
+    "energy": 0.8231333333333333,
+    "danceability": 0.1818071428571429,
+    "popularity": 43.300507700000004,
+    "genre": "freakbeat",
+    "year": 1967
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.4327833333333333,
+    "danceability": 0.0,
+    "popularity": 0.0,
+    "genre": "post-grunge",
+    "year": 1998
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8115,
+    "danceability": 0.2708285714285714,
+    "popularity": 0.0,
+    "genre": "doom metal",
+    "year": 1992
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8953166666666666,
+    "danceability": 0.84665,
+    "popularity": 0.0,
+    "genre": "urban folk",
+    "year": 2002
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8965166666666666,
+    "danceability": 0.5091357142857142,
+    "popularity": 70.7668305,
+    "genre": "blues-rock",
+    "year": 2007
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8191833333333333,
+    "danceability": 0.6284500000000001,
+    "popularity": 0.0,
+    "genre": "doom metal",
+    "year": 2001
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.7828333333333333,
+    "danceability": 0.24680000000000005,
+    "popularity": 43.7036204,
+    "genre": "texas blues",
+    "year": 1983
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.7083,
+    "danceability": 0.15742142857142857,
+    "popularity": 0.0,
+    "genre": "bossa nova",
+    "year": 1989
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.70395,
+    "danceability": 0.40714285714285714,
+    "popularity": 49.2398353,
+    "genre": "dance-punk",
+    "year": 1983
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8744333333333334,
+    "danceability": 0.33964285714285714,
+    "popularity": 62.40240489999999,
+    "genre": "jangle pop",
+    "year": 2004
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.6415666666666666,
+    "danceability": 0.26220714285714286,
+    "popularity": 0.0,
+    "genre": "ccm",
+    "year": 1989
+  },
+  {
+    "decade": "2010s",
+    "energy": 0.9418833333333333,
+    "danceability": 0.5988357142857142,
+    "popularity": 62.821796500000005,
+    "genre": "screamo",
+    "year": 2010
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.84585,
+    "danceability": 0.45821428571428574,
+    "popularity": 24.6101389,
+    "genre": "honky tonk",
+    "year": 2008
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.8109833333333333,
+    "danceability": 0.545142857142857,
+    "popularity": 82.347923,
+    "genre": "soft rock",
+    "year": 1985
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.6225666666666666,
+    "danceability": 0.4834071428571429,
+    "popularity": 39.407153,
+    "genre": "power pop",
+    "year": 2005
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.5659166666666666,
+    "danceability": 0.38375714285714285,
+    "popularity": 0.0,
+    "genre": "honky tonk",
+    "year": 1990
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.5750166666666667,
+    "danceability": 0.37547142857142857,
+    "popularity": 0.0,
+    "genre": "salsa",
+    "year": 1987
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.84385,
+    "danceability": 0.5646000000000001,
+    "popularity": 0.0,
+    "genre": "progressive house",
+    "year": 2000
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9457,
+    "danceability": 0.3678857142857143,
+    "popularity": 0.0,
+    "genre": "speed metal",
+    "year": 2008
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8673166666666667,
+    "danceability": 1.0,
+    "popularity": 43.5179324,
+    "genre": "big beat",
+    "year": 2005
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.8626333333333333,
+    "danceability": 0.584342857142857,
+    "popularity": 73.5168669,
+    "genre": "blues",
+    "year": 1972
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8453833333333333,
+    "danceability": 0.885742857142857,
+    "popularity": 54.5230294,
+    "genre": "electronic",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8571000000000001,
+    "danceability": 0.6840642857142858,
+    "popularity": 37.253003899999996,
+    "genre": "lovers rock",
+    "year": 2003
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8782166666666666,
+    "danceability": 1.0,
+    "popularity": 40.5115722,
+    "genre": "hip hop",
+    "year": 2000
+  },
+  {
+    "decade": "1960s",
+    "energy": 0.74605,
+    "danceability": 0.3730142857142857,
+    "popularity": 33.4706549,
+    "genre": "hard bop",
+    "year": 1961
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8891000000000001,
+    "danceability": 0.2573142857142857,
+    "popularity": 0.0,
+    "genre": "modern laika",
+    "year": 2009
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.7019000000000001,
+    "danceability": 0.6664928571428571,
+    "popularity": 0.0,
+    "genre": "salsa",
+    "year": 1973
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.92775,
+    "danceability": 0.9713214285714287,
+    "popularity": 77.4816244,
+    "genre": "reggaeton",
+    "year": 2008
+  },
+  {
+    "decade": "1960s",
+    "energy": 0.85765,
+    "danceability": 0.30384285714285714,
+    "popularity": 43.483809,
+    "genre": "easy listening",
+    "year": 1966
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8863666666666667,
+    "danceability": 0.22155714285714287,
+    "popularity": 54.732483200000004,
+    "genre": "psychobilly",
+    "year": 2002
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9121666666666667,
+    "danceability": 0.506,
+    "popularity": 0.0,
+    "genre": "black metal",
+    "year": 2006
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7354666666666667,
+    "danceability": 0.5025714285714287,
+    "popularity": 0.0,
+    "genre": "country blues",
+    "year": 2001
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.7641333333333333,
+    "danceability": 0.8779857142857144,
+    "popularity": 0.0,
+    "genre": "country rock",
+    "year": 1973
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.48511666666666664,
+    "danceability": 0.4936642857142857,
+    "popularity": 37.753164500000004,
+    "genre": "instrumental pop",
+    "year": 2007
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9337166666666668,
+    "danceability": 0.8683785714285714,
+    "popularity": 21.5080319,
+    "genre": "hardcore punk",
+    "year": 2002
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9119833333333334,
+    "danceability": 0.45712857142857144,
+    "popularity": 55.96466100000001,
+    "genre": "alternative hip hop",
+    "year": 2005
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.94035,
+    "danceability": 0.44248571428571426,
+    "popularity": 72.59841879999999,
+    "genre": "dance pop",
+    "year": 1986
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.83765,
+    "danceability": 0.7388928571428571,
+    "popularity": 0.0,
+    "genre": "roots reggae",
+    "year": 2004
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9150166666666666,
+    "danceability": 0.6143785714285714,
+    "popularity": 52.5497119,
+    "genre": "groove metal",
+    "year": 2007
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9022666666666667,
+    "danceability": 1.0,
+    "popularity": 25.383473600000002,
+    "genre": "bluegrass",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.92155,
+    "danceability": 0.6979642857142857,
+    "popularity": 68.109203,
+    "genre": "post-hardcore",
+    "year": 2004
+  },
+  {
+    "decade": "1960s",
+    "energy": 0.8593166666666666,
+    "danceability": 0.3389857142857143,
+    "popularity": 0.0,
+    "genre": "blues-rock",
+    "year": 1966
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.9291833333333333,
+    "danceability": 0.45592142857142853,
+    "popularity": 69.99136030000001,
+    "genre": "big beat",
+    "year": 1999
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8645499999999999,
+    "danceability": 0.2931714285714285,
+    "popularity": 0.0,
+    "genre": "hip hop",
+    "year": 1994
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7507166666666667,
+    "danceability": 0.3237428571428571,
+    "popularity": 49.6175336,
+    "genre": "post-hardcore",
+    "year": 2007
+  },
+  {
+    "decade": "2010s",
+    "energy": 0.9507166666666667,
+    "danceability": 0.6003714285714286,
+    "popularity": 61.1214623,
+    "genre": "musica",
+    "year": 2010
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.7708333333333334,
+    "danceability": 0.4982928571428571,
+    "popularity": 26.586104900000002,
+    "genre": "soul jazz",
+    "year": 1978
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7615833333333334,
+    "danceability": 0.09509999999999995,
+    "popularity": 0.0,
+    "genre": "downtempo",
+    "year": 2006
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9108999999999999,
+    "danceability": 0.4496857142857143,
+    "popularity": 64.5139841,
+    "genre": "modern rock",
+    "year": 2006
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8788666666666667,
+    "danceability": 0.8755,
+    "popularity": 56.101871599999996,
+    "genre": "garage rock",
+    "year": 2001
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.8608166666666667,
+    "danceability": 0.7454214285714287,
+    "popularity": 73.8191738,
+    "genre": "soft rock",
+    "year": 1972
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8441833333333333,
+    "danceability": 0.7669785714285715,
+    "popularity": 54.7952942,
+    "genre": "dancehall",
+    "year": 1992
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8614833333333334,
+    "danceability": 0.7371714285714286,
+    "popularity": 75.5899158,
+    "genre": "blues-rock",
+    "year": 1994
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.6145166666666666,
+    "danceability": 0.1516357142857143,
+    "popularity": 38.6477291,
+    "genre": "hip hop",
+    "year": 1998
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9047833333333333,
+    "danceability": 0.19041428571428573,
+    "popularity": 0.0,
+    "genre": "soukous",
+    "year": 2005
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7853166666666667,
+    "danceability": 0.20326428571428568,
+    "popularity": 21.5080319,
+    "genre": "mariachi",
+    "year": 2006
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.94045,
+    "danceability": 0.5716142857142857,
+    "popularity": 57.3019828,
+    "genre": "hip house",
+    "year": 2009
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.7476,
+    "danceability": 0.36565000000000003,
+    "popularity": 61.736561800000004,
+    "genre": "jazz funk",
+    "year": 1971
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.9188166666666666,
+    "danceability": 0.5030642857142857,
+    "popularity": 30.4169503,
+    "genre": "punk",
+    "year": 1998
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9256333333333333,
+    "danceability": 0.6204,
+    "popularity": 0.0,
+    "genre": "bhangra",
+    "year": 2000
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8635,
+    "danceability": 0.25712142857142856,
+    "popularity": 27.0775999,
+    "genre": "ccm",
+    "year": 1998
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9634833333333332,
+    "danceability": 0.9284785714285714,
+    "popularity": 53.7503904,
+    "genre": "hardcore metal",
+    "year": 2007
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7752833333333332,
+    "danceability": 0.38066428571428573,
+    "popularity": 0.0,
+    "genre": "country gospel",
+    "year": 1991
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8581500000000001,
+    "danceability": 0.48575714285714283,
+    "popularity": 25.383473600000002,
+    "genre": "post rock",
+    "year": 2007
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8450833333333333,
+    "danceability": 0.7952071428571429,
+    "popularity": 48.8289876,
+    "genre": "ccm",
+    "year": 1994
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7447666666666667,
+    "danceability": 0.24765714285714283,
+    "popularity": 0.0,
+    "genre": "chicago soul",
+    "year": 2006
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.8010166666666667,
+    "danceability": 0.3584928571428571,
+    "popularity": 41.3739836,
+    "genre": "soul jazz",
+    "year": 1972
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8650833333333333,
+    "danceability": 0.014078571428571404,
+    "popularity": 34.5802234,
+    "genre": "lovers rock",
+    "year": 1991
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8455833333333334,
+    "danceability": 0.2945357142857143,
+    "popularity": 0.0,
+    "genre": "los angeles",
+    "year": 2000
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8672833333333333,
+    "danceability": 0.45745,
+    "popularity": 33.4706549,
+    "genre": "vocal house",
+    "year": 2006
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8494833333333334,
+    "danceability": 0.6745285714285714,
+    "popularity": 57.1729009,
+    "genre": "country",
+    "year": 2001
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.9345,
+    "danceability": 0.5358642857142856,
+    "popularity": 72.1487046,
+    "genre": "post-grunge",
+    "year": 1999
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8386666666666667,
+    "danceability": 0.6291214285714286,
+    "popularity": 37.598430199999996,
+    "genre": "western swing",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9103666666666667,
+    "danceability": 0.4858714285714285,
+    "popularity": 25.6866156,
+    "genre": "tech house",
+    "year": 2000
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8272999999999999,
+    "danceability": 0.3791571428571428,
+    "popularity": 0.0,
+    "genre": "oldies",
+    "year": 2001
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8865999999999999,
+    "danceability": 0.2750071428571429,
+    "popularity": 0.0,
+    "genre": "male vocalist",
+    "year": 1999
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7973833333333334,
+    "danceability": 0.0,
+    "popularity": 33.4706549,
+    "genre": "hard rock",
+    "year": 1993
+  },
+  {
+    "decade": "2010s",
+    "energy": 0.9268,
+    "danceability": 0.2678357142857143,
+    "popularity": 65.0315076,
+    "genre": "happy hardcore",
+    "year": 2010
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.64435,
+    "danceability": 0.5206285714285714,
+    "popularity": 50.1315237,
+    "genre": "jazz fusion",
+    "year": 2005
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9370166666666667,
+    "danceability": 0.6279285714285714,
+    "popularity": 65.3783204,
+    "genre": "viking metal",
+    "year": 2007
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8377333333333332,
+    "danceability": 0.42827857142857145,
+    "popularity": 90.9277347,
+    "genre": "neo soul",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8935333333333334,
+    "danceability": 0.1854285714285714,
+    "popularity": 48.0236921,
+    "genre": "chinese music",
+    "year": 2009
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.82755,
+    "danceability": 0.3321928571428572,
+    "popularity": 0.0,
+    "genre": "chicago soul",
+    "year": 1980
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8748833333333333,
+    "danceability": 0.87045,
+    "popularity": 39.2008772,
+    "genre": "future jazz",
+    "year": 2008
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8258500000000001,
+    "danceability": 0.3600785714285714,
+    "popularity": 0.0,
+    "genre": "brazilian pop music",
+    "year": 2001
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.6449333333333332,
+    "danceability": 0.16584999999999997,
+    "popularity": 25.9114383,
+    "genre": "brazilian jazz",
+    "year": 2000
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7093833333333334,
+    "danceability": 0.6823285714285715,
+    "popularity": 0.0,
+    "genre": "future jazz",
+    "year": 2005
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7788333333333334,
+    "danceability": 0.19987142857142856,
+    "popularity": 68.5137628,
+    "genre": "techno",
+    "year": 1994
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9003333333333333,
+    "danceability": 0.4499142857142857,
+    "popularity": 58.1987157,
+    "genre": "teen pop",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7780333333333334,
+    "danceability": 0.28777142857142857,
+    "popularity": 0.0,
+    "genre": "jazz funk",
+    "year": 2006
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9109333333333333,
+    "danceability": 0.6466357142857143,
+    "popularity": 61.5218693,
+    "genre": "samba",
+    "year": 2005
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8858666666666667,
+    "danceability": 0.4572357142857143,
+    "popularity": 0.0,
+    "genre": "twee pop",
+    "year": 1998
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9302333333333334,
+    "danceability": 0.3242357142857143,
+    "popularity": 52.9730607,
+    "genre": "pop rap",
+    "year": 2007
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8524499999999999,
+    "danceability": 0.4286142857142857,
+    "popularity": 22.914410399999998,
+    "genre": "disco",
+    "year": 2005
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.85675,
+    "danceability": 0.46695714285714285,
+    "popularity": 61.95602890000001,
+    "genre": "downtempo",
+    "year": 1997
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9450000000000001,
+    "danceability": 0.1429,
+    "popularity": 0.0,
+    "genre": "post-grunge",
+    "year": 2008
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.8242666666666667,
+    "danceability": 0.6469214285714285,
+    "popularity": 100.0,
+    "genre": "blues-rock",
+    "year": 1970
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9063,
+    "danceability": 0.6142785714285713,
+    "popularity": 78.7210099,
+    "genre": "pop",
+    "year": 2002
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9478166666666666,
+    "danceability": 0.21498571428571428,
+    "popularity": 0.0,
+    "genre": "post-hardcore",
+    "year": 2007
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.83405,
+    "danceability": 0.6385285714285714,
+    "popularity": 0.0,
+    "genre": "disco",
+    "year": 1974
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8180333333333334,
+    "danceability": 1.0,
+    "popularity": 0.0,
+    "genre": "flamenco",
+    "year": 2005
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9161166666666667,
+    "danceability": 0.2317071428571428,
+    "popularity": 35.8976526,
+    "genre": "death core",
+    "year": 2008
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7472833333333334,
+    "danceability": 0.5063500000000001,
+    "popularity": 0.0,
+    "genre": "country blues",
+    "year": 1993
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8693666666666666,
+    "danceability": 0.49511428571428573,
+    "popularity": 0.0,
+    "genre": "ballad",
+    "year": 1999
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8008166666666666,
+    "danceability": 0.3713214285714286,
+    "popularity": 0.0,
+    "genre": "latin jazz",
+    "year": 2004
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8835999999999999,
+    "danceability": 1.0,
+    "popularity": 51.8759898,
+    "genre": "irish folk",
+    "year": 2003
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9661666666666666,
+    "danceability": 1.0,
+    "popularity": 49.9664862,
+    "genre": "straight edge",
+    "year": 2008
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8714333333333334,
+    "danceability": 0.4854857142857143,
+    "popularity": 0.0,
+    "genre": "parody",
+    "year": 2009
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.8717666666666666,
+    "danceability": 0.4217714285714286,
+    "popularity": 38.2893364,
+    "genre": "hardcore punk",
+    "year": 1984
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.6727833333333334,
+    "danceability": 0.4455428571428572,
+    "popularity": 49.6175336,
+    "genre": "roots reggae",
+    "year": 1977
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9151666666666666,
+    "danceability": 1.0,
+    "popularity": 62.7363448,
+    "genre": "post-grunge",
+    "year": 2003
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8925833333333333,
+    "danceability": 0.39299999999999996,
+    "popularity": 0.0,
+    "genre": "synthpop",
+    "year": 2008
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.5352499999999999,
+    "danceability": 0.7041285714285714,
+    "popularity": 0.0,
+    "genre": "jazz fusion",
+    "year": 1977
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8070833333333333,
+    "danceability": 1.0,
+    "popularity": 0.0,
+    "genre": "reggae",
+    "year": 1996
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.6665166666666666,
+    "danceability": 0.3792571428571429,
+    "popularity": 0.0,
+    "genre": "rock 'n roll",
+    "year": 1983
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8198833333333333,
+    "danceability": 0.3323214285714286,
+    "popularity": 79.2042603,
+    "genre": "rock",
+    "year": 2005
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8999,
+    "danceability": 0.14646428571428569,
+    "popularity": 0.0,
+    "genre": "los angeles",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.81845,
+    "danceability": 0.9275642857142857,
+    "popularity": 65.4800662,
+    "genre": "dance pop",
+    "year": 2003
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.7233499999999999,
+    "danceability": 1.0,
+    "popularity": 26.2509351,
+    "genre": "dance rock",
+    "year": 1977
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9150333333333334,
+    "danceability": 0.4567428571428572,
+    "popularity": 44.545452600000004,
+    "genre": "modern rock",
+    "year": 2005
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8783166666666666,
+    "danceability": 0.44117142857142855,
+    "popularity": 49.271364,
+    "genre": "cumbia",
+    "year": 1998
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.82815,
+    "danceability": 0.19727142857142854,
+    "popularity": 48.306456,
+    "genre": "underground rap",
+    "year": 2003
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7878000000000001,
+    "danceability": 0.8449928571428572,
+    "popularity": 49.6175336,
+    "genre": "blues-rock",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.77415,
+    "danceability": 0.40940000000000004,
+    "popularity": 0.0,
+    "genre": "folk-pop",
+    "year": 2008
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7980166666666667,
+    "danceability": 0.8166571428571429,
+    "popularity": 0.0,
+    "genre": "comedy",
+    "year": 1998
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.5871,
+    "danceability": 0.5069642857142856,
+    "popularity": 0.0,
+    "genre": "delta blues",
+    "year": 1990
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.13928333333333331,
+    "danceability": 0.7739428571428572,
+    "popularity": 0.0,
+    "genre": "no wave",
+    "year": 1993
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.8799333333333333,
+    "danceability": 0.5035000000000001,
+    "popularity": 46.3489662,
+    "genre": "deathrock",
+    "year": 1989
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.8043833333333333,
+    "danceability": 0.42457857142857147,
+    "popularity": 62.8296796,
+    "genre": "soft rock",
+    "year": 1988
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8355333333333334,
+    "danceability": 0.6496999999999999,
+    "popularity": 0.0,
+    "genre": "electro",
+    "year": 2004
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8445666666666667,
+    "danceability": 0.5089142857142857,
+    "popularity": 61.31252430000001,
+    "genre": "sympho black metal",
+    "year": 1997
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.7801333333333333,
+    "danceability": 0.6075357142857143,
+    "popularity": 0.0,
+    "genre": "roots reggae",
+    "year": 1982
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8252333333333333,
+    "danceability": 0.7243214285714286,
+    "popularity": 30.4169503,
+    "genre": "ccm",
+    "year": 2002
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9138333333333333,
+    "danceability": 0.20936428571428575,
+    "popularity": 0.0,
+    "genre": "los angeles",
+    "year": 2001
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.76935,
+    "danceability": 0.7922571428571429,
+    "popularity": 0.0,
+    "genre": "country rock",
+    "year": 1974
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8209333333333333,
+    "danceability": 0.5360928571428571,
+    "popularity": 34.0922756,
+    "genre": "progressive trance",
+    "year": 2006
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.8281166666666666,
+    "danceability": 0.26240714285714284,
+    "popularity": 37.598430199999996,
+    "genre": "hard rock",
+    "year": 1987
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9064666666666666,
+    "danceability": 0.6399357142857144,
+    "popularity": 29.987748800000002,
+    "genre": "chanson",
+    "year": 2001
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9220833333333334,
+    "danceability": 0.9293,
+    "popularity": 79.3613668,
+    "genre": "rock",
+    "year": 2002
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.76245,
+    "danceability": 0.5176071428571429,
+    "popularity": 53.6781929,
+    "genre": "jazz fusion",
+    "year": 1990
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8410833333333334,
+    "danceability": 0.5300714285714286,
+    "popularity": 0.0,
+    "genre": "progressive trance",
+    "year": 2001
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.5438500000000001,
+    "danceability": 0.0,
+    "popularity": 30.4169503,
+    "genre": "chill-out",
+    "year": 2007
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8660166666666667,
+    "danceability": 0.1689,
+    "popularity": 63.6287224,
+    "genre": "hip hop",
+    "year": 1998
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8422666666666667,
+    "danceability": 0.7397642857142858,
+    "popularity": 51.1424326,
+    "genre": "country rock",
+    "year": 1999
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8033666666666667,
+    "danceability": 0.35928571428571426,
+    "popularity": 0.0,
+    "genre": "electric blues",
+    "year": 1994
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8036166666666666,
+    "danceability": 0.22147857142857147,
+    "popularity": 37.9523324,
+    "genre": "downtempo",
+    "year": 2002
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.9464166666666666,
+    "danceability": 0.8035857142857143,
+    "popularity": 60.085380300000004,
+    "genre": "power pop",
+    "year": 1999
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8881333333333333,
+    "danceability": 0.31760714285714287,
+    "popularity": 0.0,
+    "genre": "dancehall",
+    "year": 2004
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.89225,
+    "danceability": 0.28807857142857146,
+    "popularity": 40.5115722,
+    "genre": "post-hardcore",
+    "year": 2007
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9377,
+    "danceability": 0.1809357142857143,
+    "popularity": 0.0,
+    "genre": "dance pop",
+    "year": 2003
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.86615,
+    "danceability": 0.5516928571428571,
+    "popularity": 67.62813949999999,
+    "genre": "all-female",
+    "year": 1994
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7996,
+    "danceability": 0.5049428571428572,
+    "popularity": 58.511648699999995,
+    "genre": "blues-rock",
+    "year": 2009
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.81215,
+    "danceability": 0.33312142857142857,
+    "popularity": 0.0,
+    "genre": "folk-pop",
+    "year": 1993
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7379,
+    "danceability": 0.5804071428571429,
+    "popularity": 0.0,
+    "genre": "roots reggae",
+    "year": 1997
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.7885833333333333,
+    "danceability": 0.5516428571428571,
+    "popularity": 55.7187768,
+    "genre": "blues-rock",
+    "year": 1988
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9479333333333333,
+    "danceability": 0.23595000000000002,
+    "popularity": 66.0680598,
+    "genre": "rap metal",
+    "year": 2005
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8779666666666667,
+    "danceability": 0.5816999999999999,
+    "popularity": 0.0,
+    "genre": "blue-eyed soul",
+    "year": 1998
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.48813333333333336,
+    "danceability": 0.15445000000000003,
+    "popularity": 55.3778846,
+    "genre": "chill-out",
+    "year": 1983
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8868666666666667,
+    "danceability": 0.25630000000000003,
+    "popularity": 46.0541281,
+    "genre": "stoner metal",
+    "year": 1999
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8672,
+    "danceability": 0.4667428571428571,
+    "popularity": 0.0,
+    "genre": "new wave",
+    "year": 1991
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9345666666666667,
+    "danceability": 0.7515999999999999,
+    "popularity": 47.1578248,
+    "genre": "roots rock",
+    "year": 2006
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8639166666666667,
+    "danceability": 0.8973071428571427,
+    "popularity": 0.0,
+    "genre": "progressive house",
+    "year": 2009
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.8156333333333333,
+    "danceability": 0.5829214285714286,
+    "popularity": 0.0,
+    "genre": "electric blues",
+    "year": 1975
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.79135,
+    "danceability": 0.17845000000000003,
+    "popularity": 45.733701100000005,
+    "genre": "alternative dance",
+    "year": 2005
+  },
+  {
+    "decade": "1960s",
+    "energy": 0.7593666666666666,
+    "danceability": 0.37147142857142856,
+    "popularity": 0.0,
+    "genre": "hard bop",
+    "year": 1961
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.9347,
+    "danceability": 0.7729285714285715,
+    "popularity": 0.0,
+    "genre": "celtic punk",
+    "year": 1997
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8863833333333333,
+    "danceability": 0.4498857142857142,
+    "popularity": 50.5487343,
+    "genre": "electronic",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7427166666666667,
+    "danceability": 0.3461571428571429,
+    "popularity": 38.293509,
+    "genre": "brill building pop",
+    "year": 2003
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7985,
+    "danceability": 0.3921071428571428,
+    "popularity": 53.238942,
+    "genre": "alternative hip hop",
+    "year": 2005
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8714333333333334,
+    "danceability": 0.39092857142857146,
+    "popularity": 0.0,
+    "genre": "southern rock",
+    "year": 2007
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.8081,
+    "danceability": 0.5833857142857143,
+    "popularity": 75.1436617,
+    "genre": "blue-eyed soul",
+    "year": 1980
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8904666666666666,
+    "danceability": 0.37902142857142856,
+    "popularity": 0.0,
+    "genre": "pop folk",
+    "year": 1998
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8439333333333333,
+    "danceability": 0.41531428571428575,
+    "popularity": 54.4514002,
+    "genre": "roots reggae",
+    "year": 2005
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.93725,
+    "danceability": 0.5694285714285714,
+    "popularity": 0.0,
+    "genre": "post-grunge",
+    "year": 2005
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8345666666666667,
+    "danceability": 0.3236714285714285,
+    "popularity": 0.0,
+    "genre": "pop rock",
+    "year": 1993
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7249333333333332,
+    "danceability": 0.6206714285714287,
+    "popularity": 32.3112121,
+    "genre": "bluegrass",
+    "year": 2008
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7388666666666667,
+    "danceability": 0.0,
+    "popularity": 0.0,
+    "genre": "soundtrack",
+    "year": 2006
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7943666666666667,
+    "danceability": 0.627357142857143,
+    "popularity": 56.498596400000004,
+    "genre": "instrumental rock",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9153333333333333,
+    "danceability": 0.4573642857142858,
+    "popularity": 0.0,
+    "genre": "rock 'n roll",
+    "year": 2006
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8806999999999999,
+    "danceability": 0.4712714285714285,
+    "popularity": 0.0,
+    "genre": "glam rock",
+    "year": 1994
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9293666666666667,
+    "danceability": 0.6436428571428573,
+    "popularity": 62.9071836,
+    "genre": "groove metal",
+    "year": 2007
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8886666666666667,
+    "danceability": 0.4980642857142858,
+    "popularity": 51.8310319,
+    "genre": "soft rock",
+    "year": 1996
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8879333333333332,
+    "danceability": 0.2092571428571429,
+    "popularity": 55.192151499999994,
+    "genre": "stoner metal",
+    "year": 2000
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8903,
+    "danceability": 0.062385714285714246,
+    "popularity": 36.037058300000005,
+    "genre": "hard rock",
+    "year": 1998
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8152666666666666,
+    "danceability": 0.39502857142857145,
+    "popularity": 65.3811413,
+    "genre": "honky tonk",
+    "year": 1998
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.894,
+    "danceability": 0.5321428571428571,
+    "popularity": 69.3464248,
+    "genre": "dance rock",
+    "year": 2008
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8884333333333333,
+    "danceability": 0.24326428571428574,
+    "popularity": 0.0,
+    "genre": "rap metal",
+    "year": 1999
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.7927333333333333,
+    "danceability": 0.4520928571428572,
+    "popularity": 0.0,
+    "genre": "blues-rock",
+    "year": 1988
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.7665166666666666,
+    "danceability": 0.45130000000000003,
+    "popularity": 69.4308688,
+    "genre": "no wave",
+    "year": 1977
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9215666666666666,
+    "danceability": 0.6434071428571428,
+    "popularity": 57.4693297,
+    "genre": "post-grunge",
+    "year": 2008
+  },
+  {
+    "decade": "2010s",
+    "energy": 0.9300999999999999,
+    "danceability": 0.2867,
+    "popularity": 53.510602500000005,
+    "genre": "viking metal",
+    "year": 2010
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8793333333333333,
+    "danceability": 0.6869928571428572,
+    "popularity": 51.5357179,
+    "genre": "stoner metal",
+    "year": 2002
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8646499999999999,
+    "danceability": 0.5272285714285715,
+    "popularity": 0.0,
+    "genre": "chanson francaise",
+    "year": 2002
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8436,
+    "danceability": 0.27008571428571426,
+    "popularity": 40.5115722,
+    "genre": "hip hop",
+    "year": 1993
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.8250166666666666,
+    "danceability": 0.6057214285714285,
+    "popularity": 0.0,
+    "genre": "rock",
+    "year": 1984
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7646166666666667,
+    "danceability": 0.3504642857142857,
+    "popularity": 46.2643183,
+    "genre": "classic country",
+    "year": 2001
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.908,
+    "danceability": 0.7471071428571429,
+    "popularity": 55.6739869,
+    "genre": "sympho black metal",
+    "year": 2003
+  },
+  {
+    "decade": "1960s",
+    "energy": 0.7992833333333333,
+    "danceability": 0.5265785714285715,
+    "popularity": 0.0,
+    "genre": "comedy",
+    "year": 1961
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9066166666666666,
+    "danceability": 1.0,
+    "popularity": 0.0,
+    "genre": "skate punk",
+    "year": 2006
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8978166666666667,
+    "danceability": 0.2856357142857143,
+    "popularity": 0.0,
+    "genre": "dance pop",
+    "year": 2006
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.6899333333333334,
+    "danceability": 0.3574857142857143,
+    "popularity": 35.5285536,
+    "genre": "hip hop",
+    "year": 2003
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8384166666666667,
+    "danceability": 0.4218571428571429,
+    "popularity": 45.4192988,
+    "genre": "country",
+    "year": 2005
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8830666666666667,
+    "danceability": 0.32254999999999995,
+    "popularity": 41.3739836,
+    "genre": "soft rock",
+    "year": 2004
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8820333333333333,
+    "danceability": 0.4646928571428572,
+    "popularity": 0.0,
+    "genre": "indie rock",
+    "year": 2006
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.6214999999999999,
+    "danceability": 0.2863428571428571,
+    "popularity": 26.586104900000002,
+    "genre": "indie rock",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9663,
+    "danceability": 0.3991928571428571,
+    "popularity": 52.8782481,
+    "genre": "ska punk",
+    "year": 2003
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7945833333333333,
+    "danceability": 0.2614,
+    "popularity": 0.0,
+    "genre": "humppa",
+    "year": 2009
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8258166666666666,
+    "danceability": 0.5657928571428572,
+    "popularity": 0.0,
+    "genre": "alternative metal",
+    "year": 1990
+  },
+  {
+    "decade": "1960s",
+    "energy": 0.7734666666666666,
+    "danceability": 0.32287142857142853,
+    "popularity": 0.0,
+    "genre": "honky tonk",
+    "year": 1968
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8862666666666666,
+    "danceability": 0.27142142857142854,
+    "popularity": 0.0,
+    "genre": "zouk",
+    "year": 2000
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8582833333333333,
+    "danceability": 0.3071785714285714,
+    "popularity": 0.0,
+    "genre": "chanson",
+    "year": 1995
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8987333333333333,
+    "danceability": 0.35314285714285715,
+    "popularity": 0.0,
+    "genre": "alternative metal",
+    "year": 1997
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8645333333333334,
+    "danceability": 0.8835571428571429,
+    "popularity": 0.0,
+    "genre": "jungle music",
+    "year": 2003
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.7924166666666667,
+    "danceability": 1.0,
+    "popularity": 78.5025092,
+    "genre": "pop rock",
+    "year": 1983
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8933333333333333,
+    "danceability": 0.5214142857142856,
+    "popularity": 81.063009,
+    "genre": "progressive house",
+    "year": 2004
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9692833333333333,
+    "danceability": 0.33355714285714283,
+    "popularity": 44.713579599999996,
+    "genre": "post-grunge",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.4669666666666667,
+    "danceability": 0.27001428571428576,
+    "popularity": 60.303014499999996,
+    "genre": "death core",
+    "year": 2005
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.9059,
+    "danceability": 0.6079214285714286,
+    "popularity": 50.7983552,
+    "genre": "parody",
+    "year": 1999
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.7973,
+    "danceability": 0.3351928571428572,
+    "popularity": 0.0,
+    "genre": "power pop",
+    "year": 1982
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8409166666666666,
+    "danceability": 0.3638071428571429,
+    "popularity": 0.0,
+    "genre": "gangster rap",
+    "year": 2007
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7146166666666666,
+    "danceability": 0.15592142857142852,
+    "popularity": 0.0,
+    "genre": "classic country",
+    "year": 1996
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9013333333333333,
+    "danceability": 0.18576428571428574,
+    "popularity": 66.1061378,
+    "genre": "hip hop",
+    "year": 2004
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8549,
+    "danceability": 0.46444285714285716,
+    "popularity": 27.0775999,
+    "genre": "blues-rock",
+    "year": 2003
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8778166666666666,
+    "danceability": 0.2666071428571429,
+    "popularity": 0.0,
+    "genre": "teen pop",
+    "year": 2004
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8989666666666667,
+    "danceability": 0.12658571428571425,
+    "popularity": 49.4469709,
+    "genre": "death core",
+    "year": 2007
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.6725,
+    "danceability": 0.17294285714285718,
+    "popularity": 24.9065795,
+    "genre": "polka",
+    "year": 1998
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8733833333333333,
+    "danceability": 0.7572214285714285,
+    "popularity": 0.0,
+    "genre": "dark wave",
+    "year": 1995
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.78405,
+    "danceability": 0.8970214285714285,
+    "popularity": 0.0,
+    "genre": "classic country",
+    "year": 1990
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9230333333333333,
+    "danceability": 0.3002428571428572,
+    "popularity": 60.1034317,
+    "genre": "pop rock",
+    "year": 2005
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7255833333333332,
+    "danceability": 0.1819428571428571,
+    "popularity": 0.0,
+    "genre": "flamenco",
+    "year": 1992
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9269166666666667,
+    "danceability": 0.4806714285714285,
+    "popularity": 79.0786932,
+    "genre": "garage rock",
+    "year": 2004
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8345166666666667,
+    "danceability": 0.30527857142857145,
+    "popularity": 0.0,
+    "genre": "stoner metal",
+    "year": 2002
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7807,
+    "danceability": 0.2835785714285714,
+    "popularity": 0.0,
+    "genre": "delta blues",
+    "year": 1998
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.7210166666666666,
+    "danceability": 0.44225000000000003,
+    "popularity": 0.0,
+    "genre": "rock",
+    "year": 1976
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.84155,
+    "danceability": 0.2573428571428572,
+    "popularity": 60.4500739,
+    "genre": "breakbeat",
+    "year": 1997
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7223833333333334,
+    "danceability": 1.0,
+    "popularity": 48.314341500000005,
+    "genre": "vocal jazz",
+    "year": 2005
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8485166666666667,
+    "danceability": 0.46368571428571426,
+    "popularity": 42.744657200000006,
+    "genre": "country gospel",
+    "year": 2001
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8911166666666667,
+    "danceability": 0.6798071428571428,
+    "popularity": 26.586104900000002,
+    "genre": "alternative metal",
+    "year": 2008
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8824333333333333,
+    "danceability": 0.5870857142857143,
+    "popularity": 21.5080319,
+    "genre": "pop rock",
+    "year": 1998
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9206166666666667,
+    "danceability": 0.6536285714285714,
+    "popularity": 0.0,
+    "genre": "alternative metal",
+    "year": 2001
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8671,
+    "danceability": 0.33406428571428576,
+    "popularity": 67.82359249999999,
+    "genre": "hip hop",
+    "year": 1998
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.55885,
+    "danceability": 0.4227642857142857,
+    "popularity": 0.0,
+    "genre": "ghetto tech",
+    "year": 2002
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8800166666666667,
+    "danceability": 0.4838928571428572,
+    "popularity": 53.510602500000005,
+    "genre": "heavy metal",
+    "year": 1999
+  },
+  {
+    "decade": "1960s",
+    "energy": 0.8034166666666667,
+    "danceability": 0.2841214285714286,
+    "popularity": 0.0,
+    "genre": "country blues",
+    "year": 1968
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.9129166666666666,
+    "danceability": 0.8559428571428571,
+    "popularity": 40.1486711,
+    "genre": "viking metal",
+    "year": 1998
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8328000000000001,
+    "danceability": 1.0,
+    "popularity": 0.0,
+    "genre": "chanson",
+    "year": 1997
+  },
+  {
+    "decade": "2010s",
+    "energy": 0.83375,
+    "danceability": 0.5099142857142858,
+    "popularity": 59.325165199999994,
+    "genre": "noise pop",
+    "year": 2010
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9361666666666667,
+    "danceability": 0.5253500000000001,
+    "popularity": 54.7003914,
+    "genre": "hardcore punk",
+    "year": 2003
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.8207333333333333,
+    "danceability": 0.6488357142857142,
+    "popularity": 0.0,
+    "genre": "new romantic",
+    "year": 1981
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.7815,
+    "danceability": 0.32348571428571427,
+    "popularity": 0.0,
+    "genre": "experimental rock",
+    "year": 1978
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9089333333333334,
+    "danceability": 0.8829928571428571,
+    "popularity": 0.0,
+    "genre": "hip hop",
+    "year": 2005
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9095166666666666,
+    "danceability": 1.0,
+    "popularity": 67.1756386,
+    "genre": "post-grunge",
+    "year": 2009
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7295166666666667,
+    "danceability": 0.25032857142857146,
+    "popularity": 0.0,
+    "genre": "chamber jazz",
+    "year": 1993
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9261,
+    "danceability": 0.18105714285714286,
+    "popularity": 57.6399981,
+    "genre": "hard house",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8932666666666668,
+    "danceability": 0.49934999999999996,
+    "popularity": 43.965466,
+    "genre": "freestyle",
+    "year": 2002
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8260166666666666,
+    "danceability": 0.5927142857142856,
+    "popularity": 69.4372457,
+    "genre": "pop rock",
+    "year": 2004
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8884333333333333,
+    "danceability": 0.48862142857142865,
+    "popularity": 0.0,
+    "genre": "rock",
+    "year": 2004
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9443833333333332,
+    "danceability": 0.7151857142857143,
+    "popularity": 70.8486719,
+    "genre": "post-hardcore",
+    "year": 2007
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8348166666666667,
+    "danceability": 0.5865785714285715,
+    "popularity": 69.4453546,
+    "genre": "folk-pop",
+    "year": 2004
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.89915,
+    "danceability": 0.6604357142857143,
+    "popularity": 0.0,
+    "genre": "indie rock",
+    "year": 1991
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.89715,
+    "danceability": 0.7089142857142856,
+    "popularity": 32.7736683,
+    "genre": "dancehall",
+    "year": 2006
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.87555,
+    "danceability": 0.8741142857142857,
+    "popularity": 0.0,
+    "genre": "chanson",
+    "year": 1999
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8414,
+    "danceability": 0.3975428571428572,
+    "popularity": 0.0,
+    "genre": "ccm",
+    "year": 1993
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.52615,
+    "danceability": 0.033100000000000004,
+    "popularity": 0.0,
+    "genre": "meditation",
+    "year": 1982
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8803666666666667,
+    "danceability": 0.3570928571428571,
+    "popularity": 72.2289007,
+    "genre": "glam metal",
+    "year": 1990
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8995166666666667,
+    "danceability": 0.3885,
+    "popularity": 0.0,
+    "genre": "hip hop",
+    "year": 2005
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9109666666666667,
+    "danceability": 0.41124285714285713,
+    "popularity": 72.4133953,
+    "genre": "power pop",
+    "year": 2003
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8754333333333333,
+    "danceability": 0.32957142857142857,
+    "popularity": 21.5080319,
+    "genre": "free music",
+    "year": 2005
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8277,
+    "danceability": 0.38925000000000004,
+    "popularity": 0.0,
+    "genre": "chanson",
+    "year": 2002
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.8708333333333333,
+    "danceability": 0.38113571428571424,
+    "popularity": 86.4248831,
+    "genre": "dance pop",
+    "year": 1987
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8552,
+    "danceability": 0.5242285714285714,
+    "popularity": 0.0,
+    "genre": "chill-out",
+    "year": 1997
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.84995,
+    "danceability": 0.6556857142857142,
+    "popularity": 59.8688453,
+    "genre": "british invasion",
+    "year": 1975
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7640333333333333,
+    "danceability": 0.10714285714285714,
+    "popularity": 32.7736683,
+    "genre": "rap",
+    "year": 2002
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.5891500000000001,
+    "danceability": 0.0028857142857143104,
+    "popularity": 45.6949544,
+    "genre": "symphony",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8920833333333333,
+    "danceability": 0.21435,
+    "popularity": 0.0,
+    "genre": "rap metal",
+    "year": 2005
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9208166666666667,
+    "danceability": 0.1795571428571429,
+    "popularity": 54.80056210000001,
+    "genre": "los angeles",
+    "year": 2007
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9080166666666667,
+    "danceability": 0.34284285714285717,
+    "popularity": 94.599468,
+    "genre": "indie rock",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8906166666666666,
+    "danceability": 0.33806428571428565,
+    "popularity": 39.6700138,
+    "genre": "grindcore",
+    "year": 2002
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8032333333333334,
+    "danceability": 0.8535,
+    "popularity": 43.9202489,
+    "genre": "country rock",
+    "year": 2000
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9386166666666667,
+    "danceability": 0.5431714285714286,
+    "popularity": 0.0,
+    "genre": "rock",
+    "year": 2004
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.77575,
+    "danceability": 0.45251428571428576,
+    "popularity": 37.253003899999996,
+    "genre": "jazz funk",
+    "year": 1998
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9195,
+    "danceability": 0.5995142857142857,
+    "popularity": 77.057886,
+    "genre": "post-grunge",
+    "year": 2003
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9066166666666666,
+    "danceability": 0.7856714285714286,
+    "popularity": 51.6396407,
+    "genre": "twee pop",
+    "year": 2007
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9159333333333334,
+    "danceability": 0.2858,
+    "popularity": 0.0,
+    "genre": "rock",
+    "year": 2006
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9477666666666666,
+    "danceability": 0.32528571428571434,
+    "popularity": 0.0,
+    "genre": "alternative metal",
+    "year": 2004
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9249333333333334,
+    "danceability": 0.35321428571428576,
+    "popularity": 77.4014062,
+    "genre": "hardcore punk",
+    "year": 2006
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8817666666666667,
+    "danceability": 0.23760714285714285,
+    "popularity": 0.0,
+    "genre": "folk",
+    "year": 2007
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7219166666666667,
+    "danceability": 0.7716785714285714,
+    "popularity": 26.2308997,
+    "genre": "chamber jazz",
+    "year": 1992
+  },
+  {
+    "decade": "1960s",
+    "energy": 0.8822,
+    "danceability": 0.2808,
+    "popularity": 0.0,
+    "genre": "country rock",
+    "year": 1963
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8617666666666667,
+    "danceability": 0.8972500000000001,
+    "popularity": 0.0,
+    "genre": "horror punk",
+    "year": 1996
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.6821666666666667,
+    "danceability": 0.0,
+    "popularity": 0.0,
+    "genre": "free improvisation",
+    "year": 2006
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8814833333333334,
+    "danceability": 0.6132714285714286,
+    "popularity": 36.037058300000005,
+    "genre": "blues-rock",
+    "year": 2004
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9306166666666668,
+    "danceability": 0.2685285714285714,
+    "popularity": 46.0541281,
+    "genre": "rap",
+    "year": 2004
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8129333333333333,
+    "danceability": 0.2142571428571428,
+    "popularity": 58.5979766,
+    "genre": "grime",
+    "year": 2002
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9077166666666667,
+    "danceability": 1.0,
+    "popularity": 59.025271499999995,
+    "genre": "post-hardcore",
+    "year": 2008
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.49585,
+    "danceability": 0.3060071428571428,
+    "popularity": 0.0,
+    "genre": "jazz funk",
+    "year": 1998
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8355833333333333,
+    "danceability": 0.46340714285714285,
+    "popularity": 0.0,
+    "genre": "rock steady",
+    "year": 1995
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9288166666666666,
+    "danceability": 0.14994285714285718,
+    "popularity": 55.4793212,
+    "genre": "math-core",
+    "year": 2003
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8818,
+    "danceability": 0.7692642857142857,
+    "popularity": 0.0,
+    "genre": "vocal jazz",
+    "year": 2008
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9278,
+    "danceability": 0.15860714285714284,
+    "popularity": 41.9674279,
+    "genre": "british pop",
+    "year": 2008
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8680833333333333,
+    "danceability": 0.5713642857142858,
+    "popularity": 26.6955186,
+    "genre": "trance",
+    "year": 2004
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7864833333333333,
+    "danceability": 0.24307857142857148,
+    "popularity": 67.3875572,
+    "genre": "chill-out",
+    "year": 1998
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7993,
+    "danceability": 0.2004571428571428,
+    "popularity": 0.0,
+    "genre": "gangster rap",
+    "year": 1995
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.87785,
+    "danceability": 0.5977071428571429,
+    "popularity": 0.0,
+    "genre": "art rock",
+    "year": 2005
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8213333333333334,
+    "danceability": 0.2758785714285715,
+    "popularity": 69.34784710000001,
+    "genre": "texas blues",
+    "year": 1996
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9334333333333333,
+    "danceability": 0.2379642857142857,
+    "popularity": 74.57433879999999,
+    "genre": "indie rock",
+    "year": 2003
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7403166666666666,
+    "danceability": 0.15959285714285718,
+    "popularity": 38.2723281,
+    "genre": "country rock",
+    "year": 2002
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7409666666666667,
+    "danceability": 0.48570714285714284,
+    "popularity": 0.0,
+    "genre": "progressive house",
+    "year": 2006
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9020166666666667,
+    "danceability": 0.2163642857142857,
+    "popularity": 47.3346541,
+    "genre": "experimental pop",
+    "year": 2007
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9147,
+    "danceability": 1.0,
+    "popularity": 52.5497119,
+    "genre": "groove metal",
+    "year": 2007
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8698166666666667,
+    "danceability": 0.2533214285714286,
+    "popularity": 56.1428518,
+    "genre": "blue-eyed soul",
+    "year": 2004
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8643333333333333,
+    "danceability": 0.2000785714285714,
+    "popularity": 49.6175336,
+    "genre": "urban folk",
+    "year": 2008
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.6270500000000001,
+    "danceability": 0.1931285714285714,
+    "popularity": 0.0,
+    "genre": "country gospel",
+    "year": 2000
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.7914666666666667,
+    "danceability": 0.6220499999999999,
+    "popularity": 0.0,
+    "genre": "singer-songwriter",
+    "year": 1982
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7475166666666666,
+    "danceability": 0.10795714285714289,
+    "popularity": 0.0,
+    "genre": "california",
+    "year": 2003
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8054166666666667,
+    "danceability": 0.6786571428571428,
+    "popularity": 30.4169503,
+    "genre": "dub",
+    "year": 2005
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8768833333333333,
+    "danceability": 0.4647357142857143,
+    "popularity": 0.0,
+    "genre": "progressive house",
+    "year": 1996
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8772166666666668,
+    "danceability": 0.3570785714285714,
+    "popularity": 46.0484845,
+    "genre": "dance pop",
+    "year": 2008
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.863,
+    "danceability": 0.4145785714285714,
+    "popularity": 0.0,
+    "genre": "pop rock",
+    "year": 1990
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.8662333333333334,
+    "danceability": 0.8720357142857144,
+    "popularity": 25.5765101,
+    "genre": "blues-rock",
+    "year": 1971
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.86315,
+    "danceability": 0.42462857142857136,
+    "popularity": 0.0,
+    "genre": "folk rock",
+    "year": 2007
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7939833333333333,
+    "danceability": 0.28328571428571425,
+    "popularity": 0.0,
+    "genre": "country gospel",
+    "year": 1994
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8217833333333334,
+    "danceability": 0.3003928571428572,
+    "popularity": 0.0,
+    "genre": "skate punk",
+    "year": 2003
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.868,
+    "danceability": 0.6537714285714286,
+    "popularity": 33.4706549,
+    "genre": "country",
+    "year": 1999
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.9508,
+    "danceability": 0.9955642857142857,
+    "popularity": 0.0,
+    "genre": "oi",
+    "year": 1999
+  },
+  {
+    "decade": "2010s",
+    "energy": 0.7348,
+    "danceability": 0.5913,
+    "popularity": 40.5115722,
+    "genre": "blues-rock",
+    "year": 2010
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8233999999999999,
+    "danceability": 1.0,
+    "popularity": 63.6145536,
+    "genre": "progressive house",
+    "year": 2004
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8834333333333333,
+    "danceability": 0.44285714285714284,
+    "popularity": 0.0,
+    "genre": "sympho black metal",
+    "year": 1999
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8582000000000001,
+    "danceability": 0.6331571428571429,
+    "popularity": 0.0,
+    "genre": "chanson",
+    "year": 1991
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8773333333333333,
+    "danceability": 0.6285714285714286,
+    "popularity": 51.612185600000004,
+    "genre": "hip hop",
+    "year": 2005
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8720166666666667,
+    "danceability": 0.8899357142857144,
+    "popularity": 87.5510884,
+    "genre": "hardcore punk",
+    "year": 2003
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.6896166666666665,
+    "danceability": 0.44193571428571427,
+    "popularity": 0.0,
+    "genre": "hard bop",
+    "year": 1996
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.6368833333333334,
+    "danceability": 0.3547928571428572,
+    "popularity": 0.0,
+    "genre": "post-grunge",
+    "year": 2004
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.71105,
+    "danceability": 0.6970142857142857,
+    "popularity": 65.25182170000001,
+    "genre": "instrumental pop",
+    "year": 1976
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.8726166666666667,
+    "danceability": 0.3718571428571429,
+    "popularity": 26.586104900000002,
+    "genre": "parody",
+    "year": 1984
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8963,
+    "danceability": 0.6114785714285714,
+    "popularity": 0.0,
+    "genre": "disco",
+    "year": 1999
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8230999999999999,
+    "danceability": 0.23127857142857147,
+    "popularity": 0.0,
+    "genre": "soukous",
+    "year": 1998
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8785000000000001,
+    "danceability": 0.4430428571428571,
+    "popularity": 34.9166902,
+    "genre": "disco",
+    "year": 2005
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.6956500000000001,
+    "danceability": 0.6997714285714285,
+    "popularity": 0.0,
+    "genre": "country rock",
+    "year": 1992
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.8837499999999999,
+    "danceability": 0.7495,
+    "popularity": 38.293509,
+    "genre": "roots reggae",
+    "year": 1979
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8354,
+    "danceability": 0.0,
+    "popularity": 50.9640966,
+    "genre": "experimental rock",
+    "year": 2005
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.6302666666666668,
+    "danceability": 0.34077857142857143,
+    "popularity": 59.393498099999995,
+    "genre": "techno",
+    "year": 1995
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.6599,
+    "danceability": 0.2275285714285714,
+    "popularity": 0.0,
+    "genre": "post-grunge",
+    "year": 2004
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.84305,
+    "danceability": 0.5805071428571428,
+    "popularity": 0.0,
+    "genre": "urban folk",
+    "year": 2002
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.87775,
+    "danceability": 0.7017428571428571,
+    "popularity": 0.0,
+    "genre": "post-grunge",
+    "year": 1995
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8292166666666667,
+    "danceability": 0.33467142857142856,
+    "popularity": 0.0,
+    "genre": "country rock",
+    "year": 2006
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.7480333333333333,
+    "danceability": 0.7145571428571429,
+    "popularity": 39.2008772,
+    "genre": "video game music",
+    "year": 2004
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8044499999999999,
+    "danceability": 0.11923571428571426,
+    "popularity": 0.0,
+    "genre": "smooth jazz",
+    "year": 1999
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8843333333333334,
+    "danceability": 0.5076714285714287,
+    "popularity": 38.293509,
+    "genre": "country",
+    "year": 2005
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.7705000000000001,
+    "danceability": 1.0,
+    "popularity": 57.9038701,
+    "genre": "hardcore punk",
+    "year": 1985
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.7427833333333334,
+    "danceability": 0.2860142857142857,
+    "popularity": 59.6840704,
+    "genre": "soft rock",
+    "year": 1981
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8855833333333333,
+    "danceability": 0.7425642857142858,
+    "popularity": 0.0,
+    "genre": "experimental rock",
+    "year": 2009
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.8350500000000001,
+    "danceability": 0.6402071428571428,
+    "popularity": 0.0,
+    "genre": "power pop",
+    "year": 1977
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8957499999999999,
+    "danceability": 0.4572428571428571,
+    "popularity": 0.0,
+    "genre": "visual kei",
+    "year": 2009
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9417500000000001,
+    "danceability": 0.19908571428571428,
+    "popularity": 42.5278331,
+    "genre": "hardcore punk",
+    "year": 2002
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9031833333333333,
+    "danceability": 0.6586285714285715,
+    "popularity": 37.253003899999996,
+    "genre": "country music",
+    "year": 2007
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.762,
+    "danceability": 0.14812857142857142,
+    "popularity": 0.0,
+    "genre": "country rock",
+    "year": 1987
+  },
+  {
+    "decade": "2010s",
+    "energy": 0.8834833333333333,
+    "danceability": 0.4291785714285714,
+    "popularity": 67.2836061,
+    "genre": "math-core",
+    "year": 2010
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9007000000000001,
+    "danceability": 1.0,
+    "popularity": 57.011508600000006,
+    "genre": "black metal",
+    "year": 2008
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9133,
+    "danceability": 0.4998857142857143,
+    "popularity": 0.0,
+    "genre": "electro",
+    "year": 2006
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.92615,
+    "danceability": 0.3936785714285714,
+    "popularity": 37.598430199999996,
+    "genre": "heavy metal",
+    "year": 2007
+  },
+  {
+    "decade": "1980s",
+    "energy": 0.7984333333333333,
+    "danceability": 0.50315,
+    "popularity": 0.0,
+    "genre": "ccm",
+    "year": 1988
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.8573500000000001,
+    "danceability": 0.23807142857142857,
+    "popularity": 0.0,
+    "genre": "dubstep",
+    "year": 2009
+  },
+  {
+    "decade": "1970s",
+    "energy": 0.8176166666666667,
+    "danceability": 0.34758571428571433,
+    "popularity": 0.0,
+    "genre": "blues-rock",
+    "year": 1974
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9013333333333333,
+    "danceability": 0.5284714285714285,
+    "popularity": 65.8202537,
+    "genre": "pop punk",
+    "year": 2001
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9039666666666667,
+    "danceability": 0.30861428571428573,
+    "popularity": 0.0,
+    "genre": "delta blues",
+    "year": 2008
+  },
+  {
+    "decade": "2000s",
+    "energy": 0.9142666666666667,
+    "danceability": 0.52395,
+    "popularity": 26.376759,
+    "genre": "breakcore",
+    "year": 2005
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.7188333333333332,
+    "danceability": 0.6484571428571428,
+    "popularity": 47.3346541,
+    "genre": "country rock",
+    "year": 1999
+  },
+  {
+    "decade": "1990s",
+    "energy": 0.8313833333333333,
+    "danceability": 0.2533285714285714,
+    "popularity": 0.0,
+    "genre": "hip hop",
+    "year": 1994
+  }
 ]
-

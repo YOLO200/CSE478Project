@@ -12,19 +12,27 @@ class BubbleChart {
         this.colorScale = null;
         this.sizeScale = null;
         this.bubbles = null;
+        this.isResizing = false;
     }
 
     init(data) {
+        console.log('[BubbleChart] Initialization started');
+        console.log('[BubbleChart] Container ID:', this.containerId);
+        console.log('[BubbleChart] Data received:', data);
+        
         if (!data || data.length === 0) {
-            console.error('No data provided to bubble chart');
+            console.error('[BubbleChart] ERROR: No data provided to bubble chart');
             return;
         }
+        
+        console.log('[BubbleChart] Data length:', data.length);
         this.data = data;
         this.setupColorScale();
         this.setupSizeScale();
         this.setupSVG();
         this.addFilter();
         this.updateChart('1960s');
+        console.log('[BubbleChart] Initialization complete');
     }
 
     setupColorScale() {
@@ -43,11 +51,22 @@ class BubbleChart {
     }
 
     setupSVG() {
+        console.log('[BubbleChart] Setting up SVG for container:', this.containerId);
         const container = d3.select(`#${this.containerId}`);
+        
         if (container.empty()) {
-            console.error(`Container #${this.containerId} not found`);
+            console.error(`[BubbleChart] ERROR: Container #${this.containerId} not found`);
             return;
         }
+        
+        const containerNode = container.node();
+        const containerRect = containerNode.getBoundingClientRect();
+        console.log('[BubbleChart] Container found. Dimensions:', {
+            width: containerRect.width,
+            height: containerRect.height,
+            visible: containerRect.width > 0 && containerRect.height > 0
+        });
+        
         container.selectAll('*').remove();
 
         const containerWidth = container.node().getBoundingClientRect().width || 800;
@@ -78,7 +97,11 @@ class BubbleChart {
             const select = filterDiv.append('select')
                 .attr('id', 'bubble-decade-filter')
                 .on('change', (event) => {
-                    this.updateChart(event.target.value);
+                    const newDecade = event.target.value;
+                    if (this.currentDecade !== newDecade) {
+                        console.log('[BubbleChart] Decade filter changed from', this.currentDecade, 'to', newDecade);
+                        this.updateChart(newDecade);
+                    }
                 });
 
             select.selectAll('option')
@@ -92,12 +115,30 @@ class BubbleChart {
     }
 
     updateChart(decade) {
-        if (!this.svg || !this.data) return;
+        console.log('[BubbleChart] Updating chart for decade:', decade);
+        
+        if (!this.svg) {
+            console.error('[BubbleChart] ERROR: SVG not initialized');
+            return;
+        }
+        
+        if (!this.data) {
+            console.error('[BubbleChart] ERROR: Data not available');
+            return;
+        }
         
         this.currentDecade = decade;
         const filteredData = this.data.filter(d => d.decade === decade);
         
-        if (filteredData.length === 0) return;
+        console.log('[BubbleChart] Filtered data:', {
+            decade,
+            artistsCount: filteredData.length
+        });
+        
+        if (filteredData.length === 0) {
+            console.warn('[BubbleChart] WARNING: No data for decade', decade);
+            return;
+        }
         
         if (this.simulation) {
             this.simulation.stop();
@@ -146,6 +187,9 @@ class BubbleChart {
             .text(d => d.name.split(' ')[0]);
 
         this.drawLegend();
+        
+        console.log('[BubbleChart] Chart update complete');
+        console.log('[BubbleChart] Bubbles created:', filteredData.length);
     }
 
     ticked() {
@@ -205,10 +249,16 @@ class BubbleChart {
     }
 
     resize() {
-        if (this.data) {
+        if (this.data && !this.isResizing) {
+            this.isResizing = true;
+            console.log('[BubbleChart] Resizing chart');
             this.setupSVG();
-            this.addFilter();
+            const container = d3.select(`#${this.containerId}`);
+            if (container.select('.filter-controls').empty()) {
+                this.addFilter();
+            }
             this.updateChart(this.currentDecade || '1960s');
+            this.isResizing = false;
         }
     }
 }

@@ -5,12 +5,23 @@ let bubbleChart = null;
 let radialSpectrum = null;
 
 async function init() {
+    console.log('[Main] Application initialization started');
     try {
         document.body.classList.add('loading');
+        console.log('[Main] Loading data...');
 
         const processedData = await dataLoader.loadAll();
+        console.log('[Main] Data loaded successfully');
 
         setTimeout(() => {
+            console.log('[Main] Initializing visualizations with processed data:', {
+                popularity: processedData.popularity?.length || 0,
+                genres: processedData.genres?.length || 0,
+                energyDanceability: processedData.energyDanceability?.length || 0,
+                topArtists: processedData.topArtists?.length || 0,
+                radialData: processedData.radialData?.length || 0
+            });
+            
             lineChart = new LineChart('line-chart-container', 'tooltip');
             lineChart.init(processedData.popularity);
 
@@ -25,10 +36,18 @@ async function init() {
 
             radialSpectrum = new RadialSpectrum('radial-spectrum-container', 'tooltip');
             radialSpectrum.init(processedData.radialData);
+            
+            console.log('[Main] All visualizations initialized');
 
+            console.log('[Main] Initializing scrollytelling...');
             scrollytelling.init();
 
             scrollytelling.onStepChange((stepIndex, direction, element) => {
+                console.log('[Main] Step change detected:', {
+                    stepIndex,
+                    direction,
+                    elementId: element?.id || 'no-id'
+                });
                 handleStepChange(stepIndex, direction);
             });
 
@@ -52,18 +71,47 @@ async function init() {
 }
 
 function handleStepChange(stepIndex, direction) {
+    console.log('[Main] Handling step change:', {
+        stepIndex,
+        direction,
+        willResize: direction === 'enter'
+    });
+    
     if (direction === 'enter') {
         setTimeout(() => {
+            console.log('[Main] Resizing visualization for step', stepIndex);
             if (stepIndex === 1 && lineChart) {
-                lineChart.resize();
+                console.log('[Main] Resizing line chart');
+                const container = document.getElementById('line-chart-container');
+                if (container && container.getBoundingClientRect().width > 0) {
+                    lineChart.resize();
+                } else {
+                    console.warn('[Main] Line chart container not visible, skipping resize');
+                }
             } else if (stepIndex === 2 && stackedBarChart) {
-                stackedBarChart.resize();
+                console.log('[Main] Resizing stacked bar chart');
+                const container = document.getElementById('stacked-bar-container');
+                if (container && container.getBoundingClientRect().width > 0) {
+                    stackedBarChart.resize();
+                }
             } else if (stepIndex === 3 && scatterplot) {
-                scatterplot.resize();
+                console.log('[Main] Resizing scatterplot');
+                const container = document.getElementById('scatterplot-container');
+                if (container && container.getBoundingClientRect().width > 0) {
+                    scatterplot.resize();
+                }
             } else if (stepIndex === 4 && bubbleChart) {
-                bubbleChart.resize();
+                console.log('[Main] Resizing bubble chart');
+                const container = document.getElementById('bubble-chart-container');
+                if (container && container.getBoundingClientRect().width > 0) {
+                    bubbleChart.resize();
+                }
             } else if (stepIndex === 5 && radialSpectrum) {
-                radialSpectrum.resize();
+                console.log('[Main] Resizing radial spectrum');
+                const container = document.getElementById('radial-spectrum-container');
+                if (container && container.getBoundingClientRect().width > 0) {
+                    radialSpectrum.resize();
+                }
             }
         }, 100);
     }

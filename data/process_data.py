@@ -16,11 +16,77 @@ def load_spotify_data(filepath):
     print(f"Loaded {len(df)} records")
     return df
 
+def load_music_data(filepath):
+    """Load Million Song Dataset"""
+    print(f"Loading Million Song Dataset from {filepath}...")
+    df = pd.read_csv(filepath)
+    print(f"Loaded {len(df)} records")
+    
+    # Rename columns to match our expected format
+    df = df.rename(columns={
+        'song.year': 'year',
+        'artist.name': 'artist_name',
+        'song.title': 'track_name',
+        'song.tempo': 'tempo',
+        'song.loudness': 'loudness',
+        'song.key': 'key',
+        'song.mode': 'mode',
+        'song.time_signature': 'time_signature',
+        'song.duration': 'duration_ms',
+        'song.hotttnesss': 'popularity'
+    })
+    
+    # Convert year to numeric, handling 0 and invalid years
+    df['year'] = pd.to_numeric(df['year'], errors='coerce')
+    df = df[df['year'] > 0]
+    
+    # Scale popularity (hotttnesss is 0-1, convert to 0-100 scale)
+    # Handle negative values and missing data
+    if 'popularity' in df.columns:
+        # Convert to numeric, handling any string values
+        df['popularity'] = pd.to_numeric(df['popularity'], errors='coerce')
+        # Clip negative values to 0, scale to 0-100
+        df['popularity'] = df['popularity'].clip(lower=0) * 100
+        df['popularity'] = df['popularity'].fillna(0)
+    
+    # Add missing columns with default/calculated values
+    if 'energy' not in df.columns:
+        # Estimate energy from loudness (normalize -60 to 0 db range to 0-1)
+        df['energy'] = ((df['loudness'] + 60) / 60).clip(0, 1).fillna(0.5)
+    
+    if 'danceability' not in df.columns:
+        # Estimate danceability from tempo (higher tempo = more danceable, but in reasonable range)
+        df['danceability'] = ((df['tempo'] - 60) / 140).clip(0, 1).fillna(0.5)
+    
+    if 'valence' not in df.columns:
+        # Set default valence
+        df['valence'] = 0.5
+    
+    if 'acousticness' not in df.columns:
+        df['acousticness'] = 0.5
+    
+    if 'genre' not in df.columns:
+        # Extract genre from artist terms if available
+        if 'artist.terms' in df.columns:
+            df['genre'] = df['artist.terms'].fillna('Unknown')
+        else:
+            df['genre'] = 'Unknown'
+    
+    return df
+
 def clean_data(df):
     """Clean the dataset"""
     print("Cleaning data...")
-    # Remove null values in critical columns
-    df = df.dropna(subset=['year', 'popularity', 'energy', 'danceability', 'valence', 'tempo', 'loudness'])
+    # Remove null values in critical columns (year is required, others can have defaults)
+    df = df.dropna(subset=['year'])
+    
+    # Fill missing values for other columns
+    df['popularity'] = df['popularity'].fillna(0)
+    df['energy'] = df['energy'].fillna(0.5)
+    df['danceability'] = df['danceability'].fillna(0.5)
+    df['valence'] = df['valence'].fillna(0.5)
+    df['tempo'] = df['tempo'].fillna(120)
+    df['loudness'] = df['loudness'].fillna(-12)
     
     # Filter years 1960-2024
     df = df[(df['year'] >= 1960) & (df['year'] <= 2024)]
@@ -72,10 +138,29 @@ def aggregate_genres(df):
     for decade, (start, end) in decades.items():
         decade_data = df[(df['year'] >= start) & (df['year'] <= end)]
         if len(decade_data) > 0:
-            # Get genre counts
-            genre_counts = decade_data['genre'].value_counts().to_dict()
-            total = len(decade_data)
-            genre_percentages = {k: float((v / total) * 100) for k, v in genre_counts.items()}
+            # Handle genre column - might be string or need to be converted
+            genre_col = 'genre'
+            if genre_col not in decade_data.columns:
+                genre_col = 'artist.terms'  # Fallback for Million Song Dataset
+            
+            if genre_col in decade_data.columns:
+                # Clean genre data - some might be lists or have extra characters
+                genre_series = decade_data[genre_col].astype(str)
+                # Remove quotes and clean up
+                genre_series = genre_series.str.replace('"', '').str.strip()
+                
+                # Get genre counts
+                genre_counts = genre_series.value_counts().head(10).to_dict()
+                total = len(decade_data)
+                # Convert to proportions (0-1) instead of percentages
+                genre_percentages = {k: float(v / total) for k, v in genre_counts.items() if k and k != 'nan' and k != '0'}
+                
+                # If no genres found, add a default
+                if not genre_percentages:
+                    genre_percentages = {'Unknown': 1.0}
+            else:
+                genre_percentages = {'Unknown': 1.0}
+                total = len(decade_data)
             
             result.append({
                 'decade': decade,
@@ -187,44 +272,55 @@ def prepare_radial_data(df):
 def main():
     """Main processing function"""
     # Setup paths
-    data_dir = Path(__file__).parent
-    processed_dir = data_dir / 'processed'
-    processed_dir.mkdir(exist_ok=True)
+    data_dir = Path(__file__).parent.parent  # Go up one level from data/ to project root
+    processed_dir = data_dir / 'data' / 'processed'
+    processed_dir.mkdir(parents=True, exist_ok=True)
     
-    # Check if data file exists
-    spotify_file = data_dir / 'spotify_tracks.csv'
+    # Check for data files in project root
+    spotify_file = data_dir / 'SpotifyFeatures.csv'
+    music_file = data_dir / 'music.csv'
     
-    if not spotify_file.exists():
-        print(f"Warning: {spotify_file} not found. Creating sample data structure.")
-        print("Please download the dataset from: https://www.kaggle.com/datasets/zaheenhamidani/ultimate-spotify-tracks-db")
-        print("Place it in the data/ directory as 'spotify_tracks.csv'")
-        
-        # Create sample data structure
-        sample_data = {
-            'by_decade': [
-                {'decade': '1960s', 'startYear': 1960, 'endYear': 1969, 'avgPopularity': 35},
-                {'decade': '1970s', 'startYear': 1970, 'endYear': 1979, 'avgPopularity': 40},
-                {'decade': '1980s', 'startYear': 1980, 'endYear': 1989, 'avgPopularity': 45},
-                {'decade': '1990s', 'startYear': 1990, 'endYear': 1999, 'avgPopularity': 50},
-                {'decade': '2000s', 'startYear': 2000, 'endYear': 2009, 'avgPopularity': 55},
-                {'decade': '2010s', 'startYear': 2010, 'endYear': 2019, 'avgPopularity': 60},
-                {'decade': '2020s', 'startYear': 2020, 'endYear': 2024, 'avgPopularity': 65}
-            ]
-        }
-    else:
-        # Load and process actual data
-        df = load_spotify_data(spotify_file)
-        df = clean_data(df)
-        
-        # Process data
-        print("Processing data...")
-        sample_data = {
-            'by_decade': aggregate_by_decade(df),
-            'by_genre': aggregate_genres(df),
-            'energy_danceability': aggregate_energy_danceability(df),
-            'top_artists': aggregate_top_artists(df),
-            'radial_data': prepare_radial_data(df)
-        }
+    df = None
+    
+    # Try to load Spotify dataset first (has all features but no year)
+    if spotify_file.exists():
+        print(f"Found SpotifyFeatures.csv, but it may be missing year column.")
+        try:
+            spotify_df = load_spotify_data(spotify_file)
+            if 'year' not in spotify_df.columns:
+                print("SpotifyFeatures.csv doesn't have 'year' column. Will use music.csv instead.")
+            else:
+                df = spotify_df
+        except Exception as e:
+            print(f"Error loading SpotifyFeatures.csv: {e}")
+    
+    # Try to load Million Song Dataset (has year)
+    if df is None and music_file.exists():
+        print(f"Using Million Song Dataset (music.csv) which has year information.")
+        df = load_music_data(music_file)
+    elif df is None:
+        print(f"ERROR: No data files found in project root.")
+        print(f"Looking for: {spotify_file} or {music_file}")
+        print("Please ensure music.csv exists in the project root.")
+        return
+    
+    if df is None or len(df) == 0:
+        print("ERROR: No valid data found. Please ensure music.csv or SpotifyFeatures.csv exists in the project root.")
+        print("The music.csv file must have 'song.year' column with valid year values (1960-2024).")
+        return
+    
+    # Load and process actual data
+    df = clean_data(df)
+    
+    # Process data
+    print("Processing data...")
+    sample_data = {
+        'by_decade': aggregate_by_decade(df),
+        'by_genre': aggregate_genres(df),
+        'energy_danceability': aggregate_energy_danceability(df),
+        'top_artists': aggregate_top_artists(df),
+        'radial_data': prepare_radial_data(df)
+    }
     
     # Save processed data
     output_file = processed_dir / 'by_decade.json'

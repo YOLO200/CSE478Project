@@ -7,22 +7,27 @@ class ScrollytellingManager {
     }
 
     init() {
+        console.log('[Scrollytelling] Initializing scrollytelling manager...');
         if (typeof scrollama === 'undefined') {
-            console.warn('Scrollama.js not loaded. Using fallback scroll detection.');
+            console.warn('[Scrollytelling] WARNING: Scrollama.js not loaded. Using fallback scroll detection.');
             this.initFallback();
             return;
         }
         
+        console.log('[Scrollytelling] Scrollama.js found, setting up...');
         this.scroller = scrollama();
         
         this.scroller
             .setup({
                 step: '.scroll-section',
                 offset: 0.5,
-                debug: false
+                debug: false,
+                progress: false
             })
             .onStepEnter(this.handleStepEnter.bind(this))
             .onStepExit(this.handleStepExit.bind(this));
+        
+        console.log('[Scrollytelling] Scrollama setup complete');
 
         window.addEventListener('resize', () => {
             if (this.scroller && this.scroller.resize) {
@@ -31,6 +36,7 @@ class ScrollytellingManager {
         });
 
         this.sections = Array.from(document.querySelectorAll('.scroll-section'));
+        console.log('[Scrollytelling] Found', this.sections.length, 'scroll sections');
     }
 
     initFallback() {
@@ -60,6 +66,13 @@ class ScrollytellingManager {
     handleStepEnter(response) {
         const { element, index, direction } = response;
         this.currentStep = index;
+        
+        console.log('[Scrollytelling] Step entered:', {
+            stepIndex: index,
+            direction: direction,
+            elementId: element.id || 'no-id',
+            elementClass: element.className
+        });
 
         element.classList.add('active');
 

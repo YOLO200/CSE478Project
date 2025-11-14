@@ -1,59 +1,50 @@
 [
   {
     "decade": "1960s",
-    "energy": 0.52,
-    "tempo": 115,
-    "valence": 0.58,
-    "loudness": -12.5,
-    "acousticness": 0.65
+    "energy": 0.7966305352798053,
+    "tempo": 116.7104598540146,
+    "valence": 0.5,
+    "loudness": -12.202167883211679,
+    "acousticness": 0.5
   },
   {
     "decade": "1970s",
-    "energy": 0.58,
-    "tempo": 120,
-    "valence": 0.62,
-    "loudness": -11.8,
-    "acousticness": 0.58
+    "energy": 0.8075959349593496,
+    "tempo": 130.81615040650405,
+    "valence": 0.5,
+    "loudness": -11.544243902439025,
+    "acousticness": 0.5
   },
   {
     "decade": "1980s",
-    "energy": 0.65,
-    "tempo": 125,
-    "valence": 0.68,
-    "loudness": -10.5,
-    "acousticness": 0.45
+    "energy": 0.8112042141230068,
+    "tempo": 126.29023690205013,
+    "valence": 0.5,
+    "loudness": -11.327747152619589,
+    "acousticness": 0.5
   },
   {
     "decade": "1990s",
-    "energy": 0.68,
-    "tempo": 130,
-    "valence": 0.72,
-    "loudness": -9.8,
-    "acousticness": 0.35
+    "energy": 0.8204123236514523,
+    "tempo": 124.21876680497925,
+    "valence": 0.5,
+    "loudness": -10.775260580912866,
+    "acousticness": 0.5
   },
   {
     "decade": "2000s",
-    "energy": 0.72,
-    "tempo": 135,
-    "valence": 0.75,
-    "loudness": -8.5,
-    "acousticness": 0.28
+    "energy": 0.8581776248525363,
+    "tempo": 125.70020369642155,
+    "valence": 0.5,
+    "loudness": -8.509119937082188,
+    "acousticness": 0.5
   },
   {
     "decade": "2010s",
-    "energy": 0.75,
-    "tempo": 140,
-    "valence": 0.78,
-    "loudness": -7.2,
-    "acousticness": 0.22
-  },
-  {
-    "decade": "2020s",
-    "energy": 0.78,
-    "tempo": 145,
-    "valence": 0.80,
-    "loudness": -6.5,
-    "acousticness": 0.18
+    "energy": 0.8648143229166666,
+    "tempo": 118.92348437499999,
+    "valence": 0.5,
+    "loudness": -8.111140625,
+    "acousticness": 0.5
   }
 ]
-
