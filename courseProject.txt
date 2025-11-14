@@ -1,0 +1,143 @@
+Course Project
+The course project will cover the last ~8 weeks of the course. Students will work in self-selected groups of 3-5. The completed project will require you to showcase technical proficiency in web and D3 programming as well as the ability to effectively communicate data insights using visualization design concepts and theory from the course lectures.
+
+For the course project, you will create a visual data story that follows (most of) the requirements for the PacificVis Storytelling Contest.
+
+Deadlines
+Team formation: Oct 6 (each member must submit their team members as a Canvas survey)
+Project proposals: Oct 20
+Work-in-progress snapshot: Nov 10
+Poster Sessions: Dec 1 and 3
+Poster Upload: Dec 1
+Project write-up and final codebase: Dec 5
+Teammate evaluations: Dec 8
+Technical Requirements
+The PacificVis Storytelling Contest (https://visstory.github.io/Links to an external site.) is a yearly competition that solicits interesting and expressive data-driven narratives based around the creation and use of visualizations. If you choose this option, you will create your own story that would be suitable for submitting to the 2025 contest, according to the requirements outlined on the contest site. (Note: You're not actually submitting this to the contest; you'll just use the contest rules for your project.)
+
+Before selecting this option, I highly recommend you review prior contest entries! They will give you a good idea of the different types of topics/stories that are told, the types of datasets that are used, and the types of visualization techniques and storytelling mechanisms that are applied. There are many ways to tell a data story, as outlined on the contest site. Here's some common examples:
+
+Create a large infographic that combines visualizations and visual design.
+Create and showcase a series of visualizations via a video
+Create a scrollytelling story that combines visualizations and other forms of media with narrative text
+Create a storytelling website or dashboard
+and more!...
+Note that the contest site shows videos for several entries, though the entries themselves were not first implemented as videos. 
+
+The contest site lists many requirements (e.g., "The dataset(s) used in the story must be publicly available, and linked to, sourced, or otherwise referenced.") that you should follow. There are also some additional requirements specifically for CSE 478 that you must follow:
+
+You must include at least 5 different visualization techniques in the entry.
+Note: 3 bar charts == 1 visualization technique
+Variants of a visualization count as the same technique.  For example, the following are all under the "bar chart" umbrella: bar chart, stacked bar chart, radial bar chart, radar chart, diverging bar chart, normalized bar chart, grouped bar chart, bar chart with annotations or glyphs on top, isotype chart, and so on. Likewise, a "line chart" would include multi-line chart, area chart, stacked area chart, streamgraph, etc.
+One of these visualizations must be innovative/novel (we'll discuss what this means during lecture)
+You cannot have a "static" submission, such as a non-interactive image/PDF. As an example, if you want to implement an infographic type of of contest entry, you would need to make at least part of it interactive based on a user's actions or interactions (alternatively, you could create an animated visualization entry or movie, which although it might not support user interactions, would still not be static and thus fulfill this requirement).
+Your implementation must be done using D3.js (or if you are using 3D charts, libraries like three.js are allowed).
+The goal should be to create an interesting and story, both in terms of narrative and visualization designs/interactions. We will expect high-quality implementations that are on par with the types of entries presented on the contest site.
+
+If you want to choose the Scrollytelling option, here are some resources:
+https://medium.com/nightingale/from-storytelling-to-scrollytelling-a-short-introduction-and-beyond-fbda32066964
+https://shorthand.com/the-craft/an-introduction-to-scrollytelling/index.html
+There are many libraries that support scrollytelling. You can pick one to make this part of the project easier.
+https://pudding.cool/process/how-to-implement-scrollytelling/Links to an external site.
+Here are some examples of scrollytelling stories:
+https://www.nytimes.com/interactive/2015/09/30/business/how-the-us-and-opec-drive-oil-prices.html?_r=1Links to an external site. 
+https://www.bloomberg.com/graphics/2015-whats-warming-the-world/Links to an external site. 
+https://pudding.cool/Links to an external site. has several examples of scrollytelling stories.
+https://pudding.cool/2017/09/hip-hop-words/Links to an external site. 
+https://pudding.cool/2022/06/streaming/Links to an external site. 
+https://visxai.io/Links to an external site. is a research workshop that has many examples of scrollytelling
+http://www.r2d3.us/visual-intro-to-machine-learning-part-1/Links to an external site. 
+Regarding the datasets for your project:
+Some groups will create their entire story using 1 dataset. Other groups will pick a different dataset for each visualization in their story. Either option is fine, but remember: you are creating a story, so there must be a narrative through the visualizations/datasets that you use!
+These project topics are not allowed:
+COVID
+Video Games
+Kaggle and CORGIS are two sites that have a lot of open datasets that you might find good to use. You are also allowed to "hand-create" datasets, though this can take a lot of work (and you will be counted off for sloppy work).
+A "fake" dataset that you make up on your own is NOT allowed.
+An example of this would be something like, "We want to create some fake reviews for movies, so we used ChatGPT to make 1,000 reviews and visualized the result."
+A real-world model that outputs synthetic/modeled data is allowed though. Example: "We used the XYZ machine learning model to simulate temperature change over the next 100 years and visualized the result."
+Particularly if you're using 1 dataset only, I recommend that you pick datasets that are big and have lots of attributes (or data points). Datasets that are "too simple" is sometimes difficult to properly tell a story.
+You can pre-process your datasets if you want, where each visualization accesses only the necessary data that it needs, or you can do data transforms using D3/Javascript code.
+Your story should be as self-explanatory as possible.
+Employ good design (axes, labels, annotations, consistent styling and theming, etc.)
+Most teams will implement their story as a web page. If you're doing something different (eg, a video), discuss with Dr. Bryan.
+Your visualizations should be created using D3.
+CSS frameworks such as Bootstrap and JavaScript libraries such as jQuery, leaflet.s, and moment.js are allowed, but you must use D3 to implement your charts. Libraries that "simplify" D3, such as NVD3, Vega-Lite, Highcharts, etc., are not allowed.
+The "innovative view"
+As you might have read above, one of your charts is supposed to be an "innovative view." This view should either be a custom-designed visualization (ie, marks and channels custom-written using D3) or it should be an extension of an existing technique (e.g., adding new channels and layers onto an existing chart). In previous years, many students have fulfilled this requirement by combining two types of charts together.
+
+The innovative view is worth 5% of your total project grade. Put another way, your team has the option to simply submit your project containing "normal," non-innovative visualizations. If this happens, you can still receive an overall excellent score of 95/100 on the project.
+
+Goal and Grading
+The goal of the course project is to synthesize knowledge both from visualization design and theory (lectures, readings, etc.) with D3 programming. Projects will be evaluated using the following high-level criteria:
+
+Visual design and rhetoric: effectiveness of the visualizations and interactions, based on the usage scenario, intended tasks, and intended audience, incorporation of an innovative view, the usage of rhetorical devices to communicate your story.
+Data story: you can think of this project akin to a written essay, in the sense that you are communicating a story, only here you are doing so by combining visualizations + narration.
+Level of technical difficulty and quality in implementation
+The above project requirements are addressed
+Quality and clarity of project write-up
+Teamwork
+If you are worried about the innovative view, you should first propose something in your project proposal, and Dr. Bryan will discuss it with you. If follow-up discussion is needed, that is okay! If you have a good argument as to why you cannot fulfill all of the requirements above because you want to include other features, we will discuss on a case-by-case basis (Dr. Bryan must give this approval), but you must talk to the TA first.
+
+Points will be allocated in the following way:
+
+Team formation: 5%
+Project proposal: 10%
+Work in progress: 15%
+Completed system: 40%
+Live demo / poster session: 5%
+Project writeup: 10%
+Teammate evaluations: 15%
+Forming Teams
+You can use Slack to discuss and form teams. There is a teams channel created for this purpose.
+The team size is 3-5 students.
+Once your team is formed, each member should submit their team on the Team Members activity on Canvas. The deadline to complete this activity is listed above.
+Once your group is created, we will create a project GitHub repository for you for your project's codebase.
+Project Proposal
+You will submit a 2-4 page project proposal describing the high level story (or idea) you want to tell. Structure it around the following:
+
+Title + team members
+Briefly summarize the project idea (i.e., the story) you plan to implement
+Discuss the dataset(s) you intend to use for your project
+For at least one dataset, you must perform a data abstraction (if the dataset contains many attributes, you may limit this to 5-6).
+Be sure to include both a colloquial description of the data, and the generic/abstract labels.
+At a high level, outline the idioms (visualizations and interactions) you are intending to implement for the project. If desired, you can include a mockup figure outlining what you expect to implement (a pen and paper sketch is fine for this, as long as it is legible).
+This report will be submitted on Canvas as a PDF.
+
+Work in Progress (WIP) submission
+You will upload a brief write-up describing your current project status in a PDF report. This will be submitted on Canvas, and include the following:
+
+Briefly describe the tasks of your project that are finished and the tasks that need to be completed.
+Briefly talk about any changes in the project since the proposal. Such as, have any designs or interactions changed?
+Add at least 1 screenshot documenting your current project status. This screenshot should include all the visualizations implemented so far (you can use multiple screenshots if necessary).
+Add a link to the original data source, and if the data was pre-processed, describe what you did.
+Submitting the Final Project
+You will submit the final project by tagging a release on your project's GitHub codebase by Dec 6 @ 11:59 pm. Tag this version v1.0-final. This release will contain:
+
+The codebase for the completed project (ie, your GitHub repository).
+The dataset (if it is small enough, include it directly in the GitHub repo, otherwise put a link to the dataset in your writeup).
+Implementation
+
+For most projects, we should be able to download and run your code locally from GitHub via VS Code's Live Server plugin. If special requirements are involved (e.g., you want to use npm to install and run your project), please include a readme.md file describing the steps to take (eg, installing dependencies and running).
+
+Writeup
+
+You will also submit (on Canvas) a project report that will contain the following (try and keep these ~2-4 pages long).
+
+Title + names of group members
+Introduction
+Describe why you decided to tell the visual data story that you did
+Describe the Dataset(s) for used for the storyDataset description
+Describe the implementation process of the contest entry
+Describe the innovative visualization that was implemented.
+You must explicitly justify why this visualization is considered innovative.
+Discussion (lessons learned, how could the system be further improved in the future?)
+Team members + task workloads
+References (if needed)
+Poster and Poster Sessions
+The last week of class will consist of two poster sessions. Half the class will set up posters on Monday, the other half on Wednesday.
+
+You will create a poster that presents your project, including any interesting results or case studies from your project. Outside students and faculty are welcome to attend these sessions. 
+
+Poster files (PNG, PDF, PPT) will be submitted on Canvas. I will provide a 25"⨉30" template that you may use if desired. (It's also okay to go buy a poster board at Wal-Mart or Target and tape/glue photos of your story to it, but the result should be high-quality. 
+Team Evaluations
+A Canvas survey will be posted at the end of the semester where you will evaluate the performance of your team and yourself. We expect team members to contribute a similar amount on the project; team members who do not contribute will be penalized based on team evaluations, while team members who go "above and beyond" may be awarded bonus points (note: this only applies when projects have a less than 100% score).

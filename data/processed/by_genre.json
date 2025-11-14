@@ -1,0 +1,80 @@
+[
+  {
+    "decade": "1960s",
+    "genres": {
+      "Rock": 45.2,
+      "Pop": 30.1,
+      "Jazz": 12.5,
+      "R&B": 8.3,
+      "Country": 3.9
+    },
+    "total": 1500
+  },
+  {
+    "decade": "1970s",
+    "genres": {
+      "Rock": 50.5,
+      "Pop": 25.2,
+      "Disco": 10.3,
+      "R&B": 8.1,
+      "Country": 5.9
+    },
+    "total": 2000
+  },
+  {
+    "decade": "1980s",
+    "genres": {
+      "Pop": 40.3,
+      "Rock": 35.2,
+      "Hip-Hop": 12.5,
+      "Electronic": 7.5,
+      "R&B": 4.5
+    },
+    "total": 2500
+  },
+  {
+    "decade": "1990s",
+    "genres": {
+      "Pop": 35.2,
+      "Rock": 30.1,
+      "Hip-Hop": 20.5,
+      "Electronic": 8.3,
+      "R&B": 5.9
+    },
+    "total": 3000
+  },
+  {
+    "decade": "2000s",
+    "genres": {
+      "Pop": 38.5,
+      "Hip-Hop": 25.3,
+      "Rock": 20.2,
+      "Electronic": 10.5,
+      "R&B": 5.5
+    },
+    "total": 3500
+  },
+  {
+    "decade": "2010s",
+    "genres": {
+      "Pop": 42.1,
+      "Hip-Hop": 28.5,
+      "Electronic": 15.2,
+      "Rock": 10.3,
+      "R&B": 3.9
+    },
+    "total": 4000
+  },
+  {
+    "decade": "2020s",
+    "genres": {
+      "Pop": 45.8,
+      "Hip-Hop": 30.2,
+      "Electronic": 15.5,
+      "Rock": 5.2,
+      "R&B": 3.3
+    },
+    "total": 2000
+  }
+]
+

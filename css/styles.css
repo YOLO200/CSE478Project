@@ -1,0 +1,382 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Scrollytelling Container */
+#scrolly {
+    position: relative;
+    background-color: #fff;
+}
+
+/* Scroll Sections */
+.scroll-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.scroll-section:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.narrative-text {
+    width: 40%;
+    padding: 2rem;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.narrative-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #667eea;
+}
+
+.narrative-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.credits {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 2rem;
+}
+
+.visualization-container {
+    width: 60%;
+    min-height: 500px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Visualization Base Styles */
+.viz {
+    width: 100%;
+    height: 100%;
+}
+
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 5px;
+    pointer-events: none;
+    opacity: 0;
+    font-size: 12px;
+    z-index: 1000;
+    transition: opacity 0.3s;
+}
+
+.tooltip.visible {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .scroll-section {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .narrative-text {
+        width: 100%;
+        position: relative;
+        transform: none;
+        top: auto;
+        padding: 1rem;
+    }
+
+    .visualization-container {
+        width: 100%;
+        padding: 1rem;
+        min-height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .narrative-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .narrative-text p {
+        font-size: 1rem;
+    }
+
+    .visualization-container {
+        min-height: 300px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .hero-section {
+        page-break-after: always;
+    }
+
+    .scroll-section {
+        page-break-inside: avoid;
+        min-height: auto;
+    }
+}
+
+/* Loading State */
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Axis and Labels */
+.axis-label {
+    font-size: 14px;
+    fill: #666;
+}
+
+.tick text {
+    font-size: 12px;
+    fill: #666;
+}
+
+.tick line {
+    stroke: #ddd;
+}
+
+.domain {
+    stroke: #999;
+}
+
+/* Legend */
+.legend {
+    font-size: 12px;
+}
+
+.legend-item {
+    cursor: pointer;
+}
+
+/* Interactive Elements */
+.interactive {
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+.interactive:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+/* Button Styles */
+button {
+    padding: 8px 16px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Filter Controls */
+.filter-controls, .radial-controls {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.filter-controls select, .radial-controls select {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.filter-controls select:hover, .radial-controls select:hover {
+    border-color: #667eea;
+}
+
+.filter-controls select:focus, .radial-controls select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+/* Chart Animations */
+.line-path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawLine 2s ease-out forwards;
+}
+
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.dot, .bar, .bubble circle {
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+/* Loading Animation */
+.loading::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 20px auto;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Accessibility */
+*:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* Smooth Transitions */
+svg {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Legend Enhancements */
+.legend-item {
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.legend-item:hover {
+    opacity: 0.7;
+}
+
+/* Radial Spectrum Specific Styles */
+.radial-controls button {
+    margin: 0 5px;
+}
+
+.decade-ring {
+    transition: opacity 0.5s, stroke-width 0.3s;
+    cursor: pointer;
+}
+
+.decade-ring:hover {
+    opacity: 0.9 !important;
+    stroke-width: 3 !important;
+}
+
+.tempo-indicator {
+    transition: stroke-width 0.3s;
+}
+
+.center-circle {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.center-circle:hover {
+    transform: scale(1.1);
+}
+

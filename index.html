@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonic Evolution: How Music Has Changed Over Time</title>
+    
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <!-- Scrollama for scrollytelling -->
+    <script src="https://unpkg.com/scrollama@3.2.0/build/scrollama.min.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>Sonic Evolution</h1>
+            <h2>How Music Has Changed Over Time</h2>
+            <p class="subtitle">Exploring the transformation of popular music from the 1960s to today</p>
+        </div>
+    </section>
+
+    <!-- Scrollytelling Sections -->
+    <div id="scrolly">
+        <!-- Section 1: Introduction -->
+        <section class="scroll-section" data-step="0">
+            <div class="narrative-text">
+                <h2>The Sound of Generations</h2>
+                <p>Over the past several decades, popular music has undergone dramatic transformations in rhythm, energy, loudness, and emotional tone. Our story begins by exploring how the very nature of popular music has evolved.</p>
+            </div>
+            <div class="visualization-container" id="intro-viz">
+                <!-- Introduction visualization placeholder -->
+            </div>
+        </section>
+
+        <!-- Section 2: Popularity Over Time (Line Chart) -->
+        <section class="scroll-section" data-step="1">
+            <div class="narrative-text">
+                <h2>The Rise of Popularity</h2>
+                <p>Music consumption patterns have changed dramatically with the advent of streaming platforms. Let's see how the average popularity of tracks has evolved across decades.</p>
+            </div>
+            <div class="visualization-container" id="line-chart-container" role="img" aria-label="Line chart showing popularity trends over time">
+                <!-- Line chart will be rendered here -->
+            </div>
+        </section>
+
+        <!-- Section 3: Genre Composition (Stacked Bar Chart) -->
+        <section class="scroll-section" data-step="2">
+            <div class="narrative-text">
+                <h2>Genre Landscape Through the Decades</h2>
+                <p>Musical genres have shifted in prominence over time. From the dominance of rock in the 70s to the rise of hip-hop and pop in recent decades, see how genres have shaped each era.</p>
+            </div>
+            <div class="visualization-container" id="stacked-bar-container" role="img" aria-label="Stacked bar chart showing genre composition by decade">
+                <!-- Stacked bar chart will be rendered here -->
+            </div>
+        </section>
+
+        <!-- Section 4: Energy vs Danceability (Scatterplot) -->
+        <section class="scroll-section" data-step="3">
+            <div class="narrative-text">
+                <h2>The Energy-Danceability Connection</h2>
+                <p>How do songs balance energy and danceability? Explore the relationship between these two key musical attributes and how they've evolved across different eras.</p>
+            </div>
+            <div class="visualization-container" id="scatterplot-container" role="img" aria-label="Scatterplot showing energy versus danceability relationship">
+                <!-- Scatterplot will be rendered here -->
+            </div>
+        </section>
+
+        <!-- Section 5: Top Artists (Bubble Chart) -->
+        <section class="scroll-section" data-step="4">
+            <div class="narrative-text">
+                <h2>Icons of Each Era</h2>
+                <p>Every decade has its defining artists. Discover the musical icons who shaped the soundscape of their time through their popularity and impact.</p>
+            </div>
+            <div class="visualization-container" id="bubble-chart-container" role="img" aria-label="Bubble chart showing top artists by decade">
+                <!-- Bubble chart will be rendered here -->
+            </div>
+        </section>
+
+        <!-- Section 6: Radial Sound Spectrum (Innovative View) -->
+        <section class="scroll-section" data-step="5">
+            <div class="narrative-text">
+                <h2>The Sonic Fingerprint</h2>
+                <p>Our innovative visualization combines multiple audio features—energy, tempo, valence, and loudness—into a radial spectrum that reveals the unique sonic signature of each decade.</p>
+            </div>
+            <div class="visualization-container" id="radial-spectrum-container" role="img" aria-label="Radial sound spectrum visualization showing multiple audio features combined">
+                <!-- Radial spectrum will be rendered here -->
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="scroll-section" data-step="6">
+            <div class="narrative-text">
+                <h2>The Evolution Continues</h2>
+                <p>Music continues to evolve, shaped by technology, culture, and artistic innovation. The sonic journey we've explored reveals not just changes in sound, but shifts in how we experience and connect with music.</p>
+                <p class="credits">Data Sources: Spotify Tracks Dataset, Million Song Dataset</p>
+            </div>
+            <div class="visualization-container">
+                <!-- Conclusion content -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Tooltip -->
+    <div id="tooltip" class="tooltip" role="tooltip" aria-live="polite"></div>
+
+    <!-- Scripts -->
+    <script src="js/dataLoader.js"></script>
+    <script src="js/scrollytelling.js"></script>
+    <script src="js/visualizations/lineChart.js"></script>
+    <script src="js/visualizations/stackedBar.js"></script>
+    <script src="js/visualizations/scatterplot.js"></script>
+    <script src="js/visualizations/bubbleChart.js"></script>
+    <script src="js/visualizations/radialSpectrum.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
