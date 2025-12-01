@@ -344,7 +344,7 @@ class StackedBarChart {
                 .data(columnGenres)
                 .enter()
                 .append('g')
-                .attr('class', 'legend-item interactive')
+                .attr('class', 'legend-item')
                 .attr('transform', (d, i) => `translate(0,${i * rowHeight})`)
                 .on('mouseover', (event, d) => {
                     d3.selectAll('.bar').style('opacity', 0.2);

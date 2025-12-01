@@ -98,8 +98,8 @@ class ScrollytellingManager {
         this.callbacks[`step${stepIndex}`] = callback;
     }
 
-    onStepChange(callback) {
-        this.callbacks.onStepChange = callback;
+    onStepChange() {
+
     }
 
     getCurrentStep() {

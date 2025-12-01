@@ -178,18 +178,72 @@ class BubbleChart {
             .on('mouseout', () => this.hideTooltip())
             .on('mousemove', (event) => this.moveTooltip(event));
 
-        this.bubbles.append('text')
+        const texts = this.bubbles.append('text')
             .attr('text-anchor', 'middle')
-            .attr('dy', '.35em')
-            .attr('font-size', d => Math.max(10, this.sizeScale(d.popularity) / 3))
+            .attr('font-size', d => Math.max(12, this.sizeScale(d.popularity) / 3.75))
             .attr('fill', '#fff')
-            .attr('font-weight', 'bold')
-            .text(d => d.name.split(' ')[0]);
+            .attr('font-weight', 'bold');
 
-        this.drawLegend();
+        texts.each((d, i, nodes) => {
+            const element = d3.select(nodes[i]);
+            const radius = this.sizeScale(d.popularity);
+            this.wrapTextInsideCircle(element, d.name, radius);
+
+            // Add tooltip events to text
+            element.on('mouseover', (event, d) => this.showTooltip(event, d))
+                .on('mouseout', () => this.hideTooltip())
+                .on('mousemove', (event) => this.moveTooltip(event));
+        });
+
+        this.drawLegend(filteredData);
         
         console.log('[BubbleChart] Chart update complete');
         console.log('[BubbleChart] Bubbles created:', filteredData.length);
+    }
+
+    wrapTextInsideCircle(textElement, text, radius) {
+        const words = text
+            .split(/\s+/)
+            .filter(w => w.trim() !== "")
+            .slice(0, 5);
+
+        const lines = [];
+        let currentLine = [];
+
+        const tempTspan = textElement.append("tspan").text("");
+
+        words.forEach(word => {
+            currentLine.push(word);
+            tempTspan.text(currentLine.join(" "));
+            const textLength = tempTspan.node().getComputedTextLength();
+            if (textLength > radius * 1.6) {
+                currentLine.pop();
+                lines.push(currentLine.join(" "));
+                currentLine = [word];
+            }
+        });
+        if (currentLine.length) lines.push(currentLine.join(" "));
+        tempTspan.remove();
+
+        const fontSize = parseFloat(textElement.attr("font-size")) || 10;
+        const lineHeight = fontSize * 1.1;
+
+        textElement.text("");
+
+        lines.forEach((line, i) => {
+            textElement.append("tspan")
+                .text(line)
+                .attr("x", 0)
+                .attr("dy", i === 0 ? 0 : lineHeight)
+                .attr("text-anchor", "middle");
+        });
+
+        if (lines.length === 1) {
+            textElement.attr("transform", `translate(0, ${fontSize/3})`);
+        } else {
+            const totalHeight = (lines.length - 1) * lineHeight;
+            textElement.attr("transform", `translate(0, ${-totalHeight/2})`);
+        }
     }
 
     ticked() {
@@ -199,11 +253,16 @@ class BubbleChart {
         }
     }
 
-    drawLegend() {
-        const genres = Array.from(new Set(this.data.map(d => d.genre)));
+    drawLegend(filteredData) {
+        // Remove old legend
+        this.svg.selectAll('.legend').remove();
+
+        // Get unique genres from the filtered dataset only
+        const genres = Array.from(new Set(filteredData.map(d => d.genre)));
+
         const legend = this.svg.append('g')
             .attr('class', 'legend')
-            .attr('transform', `translate(${this.width - 150}, 60)`);
+            .attr('transform', `translate(${this.width - 50}, 60)`);
 
         const legendItems = legend.selectAll('.legend-item')
             .data(genres)

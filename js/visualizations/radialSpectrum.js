@@ -78,7 +78,7 @@ class RadialSpectrum {
         this.height = this.width;
 
         this.radius = Math.min(this.width, this.height) / 2 - 50;
-        this.centerX = this.width / 2 + this.margin.left;
+        this.centerX = this.width / 2 + this.margin.left + 100;
         this.centerY = this.height / 2 + this.margin.top;
 
         this.svg = container
@@ -108,206 +108,112 @@ class RadialSpectrum {
         const minLoudness = -20;
         const maxLoudness = 0;
         const normalized = (loudness - minLoudness) / (maxLoudness - minLoudness);
-        return 2 + (normalized * 13);
+        return (normalized * 25);
     }
 
-    drawChart() {
-        if (this.isDrawing) {
-            console.warn('[RadialSpectrum] WARNING: Already drawing, skipping recursive call');
-            return;
-        }
-        
-        console.log('[RadialSpectrum] Drawing chart - currentDecadeIndex:', this.currentDecadeIndex);
-        this.isDrawing = true;
-        
-        if (!this.svg) {
-            console.error('[RadialSpectrum] ERROR: SVG not initialized');
-            this.isDrawing = false;
-            return;
-        }
-        
-        if (!this.data || this.data.length === 0) {
-            console.error('[RadialSpectrum] ERROR: Data not available');
-            this.isDrawing = false;
-            return;
-        }
+drawChart() {
+    if (this.isDrawing) return;
+    this.isDrawing = true;
 
-        if (this.currentDecadeIndex < 0 || this.currentDecadeIndex >= this.data.length) {
-            console.warn('[RadialSpectrum] WARNING: Invalid currentDecadeIndex, resetting to 0');
-            this.currentDecadeIndex = 0;
-        }
-
-        const currentData = this.data[this.currentDecadeIndex];
-        console.log('[RadialSpectrum] Current decade data:', {
-            index: this.currentDecadeIndex,
-            decade: currentData.decade,
-            energy: currentData.energy,
-            tempo: currentData.tempo,
-            valence: currentData.valence
-        });
-        
-        const elementsToRemove = this.svg.selectAll('.spectrum-element');
-        const count = elementsToRemove.size();
-        console.log('[RadialSpectrum] Removing', count, 'existing spectrum elements');
-        elementsToRemove.remove();
-
-        // Create text shadow filter for better readability (only once per chart redraw)
-        const defs = this.svg.append('defs');
-        const textShadow = defs.append('filter')
-            .attr('id', 'text-shadow-center')
-            .attr('x', '-50%')
-            .attr('y', '-50%')
-            .attr('width', '200%')
-            .attr('height', '200%');
-        
-        textShadow.append('feGaussianBlur')
-            .attr('in', 'SourceAlpha')
-            .attr('stdDeviation', 2)
-            .attr('result', 'blur');
-        
-        textShadow.append('feOffset')
-            .attr('in', 'blur')
-            .attr('dx', 0)
-            .attr('dy', 0)
-            .attr('result', 'offsetBlur');
-        
-        textShadow.append('feFlood')
-            .attr('flood-color', '#000000')
-            .attr('flood-opacity', 0.6)
-            .attr('result', 'offsetColor');
-        
-        textShadow.append('feComposite')
-            .attr('in', 'offsetColor')
-            .attr('in2', 'offsetBlur')
-            .attr('operator', 'in')
-            .attr('result', 'shadow');
-        
-        textShadow.append('feComposite')
-            .attr('in', 'SourceGraphic')
-            .attr('in2', 'shadow')
-            .attr('operator', 'over');
-
-        const ringsDrawn = [];
-        this.data.forEach((decadeData, index) => {
-            const ringRadius = (this.radius / this.data.length) * (index + 1);
-            // Increase opacity for inactive rings to make them more visible
-            const opacity = index === this.currentDecadeIndex ? 1 : 0.5;
-            
-            this.drawDecadeRing(decadeData, ringRadius, opacity, index === this.currentDecadeIndex);
-            ringsDrawn.push(decadeData.decade);
-        });
-        console.log('[RadialSpectrum] Rings drawn for decades:', ringsDrawn);
-
-        this.drawCenterCircle(currentData);
-        this.drawLegend();
-        
-        console.log('[RadialSpectrum] Chart drawing complete');
-        console.log('[RadialSpectrum] Rings drawn:', this.data.length);
-        
+    if (!this.svg || !this.data || this.data.length === 0) {
         this.isDrawing = false;
+        return;
     }
 
-    drawDecadeRing(decadeData, radius, opacity, isActive) {
-        const numPoints = 36;
-        const points = [];
-        const decadeIndex = this.data.indexOf(decadeData);
+    // Remove previous elements
+    this.svg.selectAll('.spectrum-element').remove();
 
-        for (let i = 0; i < numPoints; i++) {
-            const angle = (i * 360) / numPoints;
-            const radians = (angle * Math.PI) / 180;
-            
-            const energyRadius = radius * (0.5 + decadeData.energy * 0.5);
-            
-            const tempoAngle = this.tempoToAngle(decadeData.tempo);
-            const angleDiff = Math.abs(angle - tempoAngle);
-            const minAngleDiff = Math.min(angleDiff, 360 - angleDiff);
-            
-            let adjustedRadius = energyRadius;
-            if (minAngleDiff < 20) {
-                adjustedRadius *= (1 + (1 - minAngleDiff / 20) * 0.2);
-            }
-            
-            const x = Math.cos(radians) * adjustedRadius;
-            const y = Math.sin(radians) * adjustedRadius;
-            
-            points.push({
-                x,
-                y,
-                angle,
-                valence: decadeData.valence,
-                energy: decadeData.energy,
-                tempo: decadeData.tempo
-            });
+    const currentData = this.data[this.currentDecadeIndex];
+
+    // Draw inactive rings first
+    this.data.forEach((decadeData, index) => {
+        if (index !== this.currentDecadeIndex) {
+            const ringRadius = this.radius;
+            this.drawDecadeRing(decadeData, ringRadius, 0.5, false);
         }
+    });
 
-        const lineGenerator = d3.line()
-            .x(d => d.x)
-            .y(d => d.y)
-            .curve(d3.curveCardinalClosed);
+    // Draw active ring on top
+    const activeRadius = this.radius;
+    this.drawDecadeRing(currentData, activeRadius, 1, true);
 
-        const ring = this.svg.append('path')
-            .datum(points)
-            .attr('class', `spectrum-element decade-ring ring-${decadeIndex}`)
-            .attr('d', lineGenerator)
-            .attr('fill', this.colorScale(decadeData.valence))
-            .attr('opacity', opacity)
-            .attr('stroke', isActive ? '#ffffff' : (opacity > 0.3 ? '#666666' : 'none'))
-            .attr('stroke-width', isActive ? 3 : (opacity > 0.3 ? 1 : 0))
-            .style('filter', isActive ? 'drop-shadow(0 0 8px rgba(0,0,0,0.3))' : 'none')
-            .on('mouseover', () => {
-                const now = Date.now();
-                if (now - this.lastHoverTime < 300) {
-                    console.log('[RadialSpectrum] Hover throttled, skipping');
-                    return;
-                }
-                
-                if (!isActive && decadeIndex !== this.currentDecadeIndex && !this.isDrawing) {
-                    console.log('[RadialSpectrum] Hover detected on ring', decadeIndex, '- switching to decade:', decadeData.decade);
-                    this.lastHoverTime = now;
-                    this.currentDecadeIndex = decadeIndex;
-                    setTimeout(() => this.drawChart(), 50);
-                } else if (isActive) {
-                    console.log('[RadialSpectrum] Hover on active ring, no action needed');
-                }
-            });
+    this.drawCenterCircle(currentData);
+    this.drawLegend();
 
-        const tempoRadians = (this.tempoToAngle(decadeData.tempo) * Math.PI) / 180;
-        const innerRadius = radius * 0.5;
-        const outerRadius = radius * 1.5;
-        const thickness = this.loudnessToThickness(decadeData.loudness);
-        
-        const tempoLine = this.svg.append('line')
-            .attr('class', 'spectrum-element tempo-indicator')
-            .attr('x1', Math.cos(tempoRadians) * innerRadius)
-            .attr('y1', Math.sin(tempoRadians) * innerRadius)
-            .attr('x2', Math.cos(tempoRadians) * outerRadius)
-            .attr('y2', Math.sin(tempoRadians) * outerRadius)
-            .attr('stroke', isActive ? '#1a1a1a' : '#888888')
-            .attr('stroke-width', thickness)
-            .attr('opacity', opacity)
-            .attr('stroke-linecap', 'round')
-            .style('filter', isActive ? 'drop-shadow(0 0 4px rgba(0,0,0,0.5))' : 'none');
+    this.isDrawing = false;
+}
+
+drawDecadeRing(decadeData, radius, opacity, isActive) {
+    const numPoints = 36;
+    const points = [];
+    const decadeIndex = this.data.indexOf(decadeData);
+
+    for (let i = 0; i < numPoints; i++) {
+        const angle = (i * 360) / numPoints;
+        const radians = (angle * Math.PI) / 180;
+        const energyRadius = (radius + 400) * 0.15 * (1 + ((decadeData.energy - 0.8) / 0.06))
+
+        // Adjust radius near tempo
+        const tempoAngle = this.tempoToAngle(decadeData.tempo);
+        const angleDiff = Math.abs(angle - tempoAngle);
+        const minAngleDiff = Math.min(angleDiff, 360 - angleDiff);
+        let adjustedRadius = energyRadius;
+        if (minAngleDiff < 20) adjustedRadius *= 1 + (1 - minAngleDiff / 20) * 0.2;
+
+        points.push({
+            x: Math.cos(radians) * adjustedRadius,
+            y: Math.sin(radians) * adjustedRadius,
+            valence: decadeData.valence
+        });
     }
+
+    const lineGenerator = d3.line()
+        .x(d => d.x)
+        .y(d => d.y)
+        .curve(d3.curveCardinalClosed);
+
+    const ring = this.svg.append('path')
+        .datum(points)
+        .attr('class', `spectrum-element decade-ring ring-${decadeIndex}`)
+        .attr('d', lineGenerator)
+        .attr('fill', this.colorScale(decadeData.valence))
+        .attr('opacity', opacity)
+        .attr('stroke', isActive ? '#ffffff' : (opacity > 0.3 ? '#666666' : 'none'))
+        .attr('stroke-width', isActive ? 3 : (opacity > 0.3 ? 1 : 0))
+        .style('filter', isActive ? 'drop-shadow(0 0 8px rgba(0,0,0,0.3))' : 'none')
+        .attr('pointer-events', isActive ? 'auto' : 'none') // only active ring reacts to hover
+        .on('mouseover', () => {
+            if (!isActive) return; // safety check
+            const now = Date.now();
+            if (now - this.lastHoverTime < 300) return;
+
+            this.lastHoverTime = now;
+            console.log('[RadialSpectrum] Hover on active ring', decadeIndex);
+        });
+
+    // Draw tempo indicator
+    const tempoRadians = (this.tempoToAngle(decadeData.tempo) * Math.PI) / 180;
+    const innerRadius = radius * 0.5;
+    const outerRadius = radius * 1.5;
+    const thickness = this.loudnessToThickness(decadeData.loudness);
+
+    this.svg.append('line')
+        .attr('class', 'spectrum-element tempo-indicator')
+        .attr('x1', Math.cos(tempoRadians) * innerRadius)
+        .attr('y1', Math.sin(tempoRadians) * innerRadius)
+        .attr('x2', Math.cos(tempoRadians) * outerRadius)
+        .attr('y2', Math.sin(tempoRadians) * outerRadius)
+        .attr('stroke', isActive ? '#1a1a1a' : '#888888')
+        .attr('stroke-width', thickness)
+        .attr('opacity', opacity)
+        .attr('stroke-linecap', 'round')
+        .style('filter', isActive ? 'drop-shadow(0 0 4px rgba(0,0,0,0.5))' : 'none')
+        .attr('pointer-events', isActive ? 'auto' : 'none');
+}
 
     drawCenterCircle(decadeData) {
         const centerGroup = this.svg.append('g')
             .attr('class', 'spectrum-element center-circle');
-
-        // Add a semi-transparent background circle for better text readability
-        centerGroup.append('circle')
-            .attr('r', 50)
-            .attr('fill', '#ffffff')
-            .attr('opacity', 0.15)
-            .attr('stroke', 'none');
-
-        // Main colored circle
-        centerGroup.append('circle')
-            .attr('r', 48)
-            .attr('fill', this.colorScale(decadeData.valence))
-            .attr('opacity', 0.9)
-            .attr('stroke', '#ffffff')
-            .attr('stroke-width', 4)
-            .style('filter', 'drop-shadow(0 0 8px rgba(0,0,0,0.4))');
 
         // Add text with shadow for better readability
         centerGroup.append('text')
@@ -328,7 +234,27 @@ class RadialSpectrum {
             .attr('fill', '#ffffff')
             .style('filter', 'url(#text-shadow-center)')
             .style('text-shadow', '0 2px 4px rgba(0,0,0,0.8), 0 0 6px rgba(0,0,0,0.5)')
-            .text(`E: ${decadeData.energy.toFixed(2)}`);
+            .text(`Energy: ${decadeData.energy.toFixed(3)}`);
+
+        centerGroup.append('text')
+            .attr('text-anchor', 'middle')
+            .attr('dy', '28')
+            .attr('font-size', '13px')
+            .attr('font-weight', '600')
+            .attr('fill', '#ffffff')
+            .style('filter', 'url(#text-shadow-center)')
+            .style('text-shadow', '0 2px 4px rgba(0,0,0,0.8), 0 0 6px rgba(0,0,0,0.5)')
+            .text(`Tempo: ${decadeData.tempo.toFixed(3)}`);
+
+        centerGroup.append('text')
+            .attr('text-anchor', 'middle')
+            .attr('dy', '44')
+            .attr('font-size', '13px')
+            .attr('font-weight', '600')
+            .attr('fill', '#ffffff')
+            .style('filter', 'url(#text-shadow-center)')
+            .style('text-shadow', '0 2px 4px rgba(0,0,0,0.8), 0 0 6px rgba(0,0,0,0.5)')
+            .text(`Loudness: ${decadeData.loudness.toFixed(3)}`);
     }
 
     drawLegend() {
@@ -337,21 +263,20 @@ class RadialSpectrum {
             .attr('transform', `translate(${-this.radius - 80}, ${-this.radius})`);
 
         legend.append('text')
-            .attr('font-size', '14px')
+            .attr('font-size', '20px')
             .attr('font-weight', 'bold')
             .text('Encoding:')
             .attr('y', 0);
 
         const items = [
             { label: 'Radius: Energy', y: 25 },
-            { label: 'Color: Valence', y: 45 },
-            { label: 'Angle: Tempo', y: 65 },
-            { label: 'Thickness: Loudness', y: 85 }
+            { label: 'Angle: Tempo', y: 45 },
+            { label: 'Thickness: Loudness', y: 65 }
         ];
 
         items.forEach(item => {
             legend.append('text')
-                .attr('font-size', '11px')
+                .attr('font-size', '14px')
                 .attr('y', item.y)
                 .text(item.label);
         });
